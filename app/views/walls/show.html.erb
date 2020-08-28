@@ -1,0 +1,20 @@
+<h1><%= @wall.name %></h1>
+
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="3">Wall Qualities</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Wall Material: <%= @wall.wall_material %></td>
+            <td>Size: <%= @wall.size %></td>
+            <td>Construction Date: <%= @wall.construction_date %></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Description:</h3>
+<h4><%= @wall.description %></h4>

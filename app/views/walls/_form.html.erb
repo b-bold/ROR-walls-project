@@ -1,0 +1,72 @@
+
+
+<% if @wall.persisted? %>
+    <% action_url = wall_url(wall) %>
+<% else %>
+    <% action_url = walls_url %>
+<% end %>
+
+
+<form action="<%= action_url %>" method="post">
+   <% if action_url == wall_url(wall) %>
+        <input type="hidden" name="_method" value="PATCH">
+    <% end %>
+   
+    <label for="name">Name</label>
+    <input id="name" type="text" name="wall[name]" value="<%= wall.name %>">
+
+<br><br>
+
+<label for="wall_material">Choose a Wall Material:</label>
+
+<select for="wall_material">
+    <option value="brick" <%= wall.wall_material == "brick" ? "selected" : ""%> >brick</option>
+    <option value="concrete" <%= wall.wall_material == "concrete" ? "selected" : ""%> >concrete</option>
+    <option value="wood" <%= wall.wall_material == "wood" ? "selected" : ""%> >wood</option>
+    <option value="cement" <%= wall.wall_material == "cement" ? "selected" : ""%> >cement</option>
+    <option value="clay" <%= wall.wall_material ? "selected" : ""%> >clay</option>
+</select>
+
+<br><br>
+
+    <label for="size">Size:</label>
+    <input type="radio" name="size" value="small" <%= wall.size == "small" ? "checked" : ""%> >
+    <label for="small">Small</label>
+    
+    <input type="radio" name="size" value="medium" <%= wall.size == "medium" ? "checked" : ""%> >
+    <label for="medium">Medium</label>
+
+    <input type="radio" name="size" value="large" <%= wall.size == "large" ? "checked" : ""%> >
+    <label for="large">Large</label>
+
+<br><br>
+
+<label for="wall_construction_date">Construction Date</label>
+
+<input 
+    type="date" 
+    id="wall_construction_date" 
+    name="wall[construction_date]"
+    value="<%= wall.construction_date %>">
+
+<br><br>
+
+<label for="description">Description:</label>
+
+<textarea id="description" name="wall[description]"
+    row="5" col="33"><%= 
+        wall.description%>
+</textarea>
+
+<br><br>
+
+<input type="submit" value="Send Request">
+</form> 
+
+
+
+
+
+
+
+    
