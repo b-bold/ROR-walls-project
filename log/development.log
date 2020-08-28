@@ -3477,3 +3477,128 @@ Processing by WallsController#index as HTML
 Completed 200 OK in 62ms (Views: 44.9ms | ActiveRecord: 15.8ms)
 
 
+Started GET "/walls/8/edit" for ::1 at 2020-08-28 08:13:24 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWall Load (5.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:33
+  Rendering walls/edit.html.erb within layouts/application
+  Rendered walls/_form.html.erb (2.5ms)
+  Rendered walls/edit.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 83ms (Views: 74.7ms | ActiveRecord: 5.5ms)
+
+
+Started PATCH "/walls/8" for ::1 at 2020-08-28 08:14:28 -0400
+Processing by WallsController#update as HTML
+  Parameters: {"wall"=>{"name"=>"Renata's House", "wall_material"=>"clay", "size"=>"small", "construction_date"=>"1993-08-28", "description"=>"This wall is in Cambridge near Central Square. The spot is a bit hidden but is a good location nonetheless. \r\n"}, "id"=>"8"}
+  [1m[36mWall Load (5.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/walls_controller.rb:40
+  [1m[36mWall Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 AND "walls"."id" != $2 LIMIT $3[0m  [["name", "Renata's House"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:40
+  [1m[36mWall Update (33.0ms)[0m  [1m[33mUPDATE "walls" SET "name" = $1, "construction_date" = $2, "wall_material" = $3, "description" = $4, "updated_at" = $5 WHERE "walls"."id" = $6[0m  [["name", "Renata's House"], ["construction_date", "1993-08-28"], ["wall_material", "clay"], ["description", "This wall is in Cambridge near Central Square. The spot is a bit hidden but is a good location nonetheless. \r\n"], ["updated_at", "2020-08-28 12:14:28.878577"], ["id", 8]]
+  ↳ app/controllers/walls_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/walls_controller.rb:40
+Redirected to http://localhost:3000/walls/8
+Completed 302 Found in 51ms (ActiveRecord: 40.0ms)
+
+
+Started GET "/walls/8" for ::1 at 2020-08-28 08:14:28 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  Rendered walls/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(795582225359918955)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateWallRentalRequest (20200828121943)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (182.8ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200828121943_create_wall_rental_request.rb:3
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/migrate/20200828121943_create_wall_rental_request.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (26.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200828121943"]]
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (5.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(795582225359918955)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(795582225359918955)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateWallRentalRequest (20200828121943)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (38.6ms)[0m  [1m[35mDROP INDEX  "index_wall_rental_requests_on_wall_id"[0m
+  ↳ bin/rails:9
+  [1m[35m (7.8ms)[0m  [1m[35mDROP TABLE "wall_rental_requests"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200828121943"]]
+  ↳ bin/rails:9
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(795582225359918955)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(795582225359918955)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateWallRentalRequests (20200828160605)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (42.7ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200828160605_create_wall_rental_requests.rb:3
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/migrate/20200828160605_create_wall_rental_requests.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200828160605"]]
+  ↳ bin/rails:9
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(795582225359918955)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

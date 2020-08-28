@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_121838) do
+ActiveRecord::Schema.define(version: 2020_08_28_160605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "wall_rental_requests", force: :cascade do |t|
+    t.integer "wall_id"
+    t.date "start_date", null: false
+    t.date "end_date", null: false
+    t.string "status", default: "PENDING"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["wall_id"], name: "index_wall_rental_requests_on_wall_id", unique: true
+  end
 
   create_table "walls", force: :cascade do |t|
     t.date "construction_date", null: false
