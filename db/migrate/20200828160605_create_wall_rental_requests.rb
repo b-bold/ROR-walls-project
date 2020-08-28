@@ -8,6 +8,6 @@ class CreateWallRentalRequests < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    add_index :wall_rental_requests, :wall_id, unique: true
+    add_index :wall_rental_requests, :wall_id
   end
 end

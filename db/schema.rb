@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_160605) do
     t.string "status", default: "PENDING"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["wall_id"], name: "index_wall_rental_requests_on_wall_id", unique: true
+    t.index ["wall_id"], name: "index_wall_rental_requests_on_wall_id"
   end
 
   create_table "walls", force: :cascade do |t|
