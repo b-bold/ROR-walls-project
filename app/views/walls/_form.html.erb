@@ -1,6 +1,6 @@
 
 
-<% if @wall.persisted? %>
+<% if wall.persisted? %>
     <% action_url = wall_url(wall) %>
 <% else %>
     <% action_url = walls_url %>
@@ -8,7 +8,7 @@
 
 
 <form action="<%= action_url %>" method="post">
-   <% if action_url == wall_url(wall) %>
+   <% if wall.persisted? %>
         <input type="hidden" name="_method" value="PATCH">
     <% end %>
    
@@ -19,7 +19,7 @@
 
 <label for="wall_material">Choose a Wall Material:</label>
 
-<select for="wall_material">
+<select for="wall_material" name="wall[wall_material]">
     <option value="brick" <%= wall.wall_material == "brick" ? "selected" : ""%> >brick</option>
     <option value="concrete" <%= wall.wall_material == "concrete" ? "selected" : ""%> >concrete</option>
     <option value="wood" <%= wall.wall_material == "wood" ? "selected" : ""%> >wood</option>
@@ -30,13 +30,13 @@
 <br><br>
 
     <label for="size">Size:</label>
-    <input type="radio" name="size" value="small" <%= wall.size == "small" ? "checked" : ""%> >
+    <input type="radio" id="size" name="wall[size]" value="small" <%= wall.size == "small" ? "checked" : ""%> >
     <label for="small">Small</label>
     
-    <input type="radio" name="size" value="medium" <%= wall.size == "medium" ? "checked" : ""%> >
+    <input type="radio" id="size" name="wall[size]" value="medium" <%= wall.size == "medium" ? "checked" : ""%> >
     <label for="medium">Medium</label>
 
-    <input type="radio" name="size" value="large" <%= wall.size == "large" ? "checked" : ""%> >
+    <input type="radio" id="size" name="wall[size]" value="large" <%= wall.size == "large" ? "checked" : ""%> >
     <label for="large">Large</label>
 
 <br><br>
