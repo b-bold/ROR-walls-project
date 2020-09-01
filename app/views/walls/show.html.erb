@@ -27,6 +27,14 @@
     <li> Status: <%= rental_request.status %></li>
     Start Date: <%= rental_request.start_date  %>
     End Date: <%= rental_request.end_date %> 
+    <% if rental_request.status == "PENDING" %>
+         <label for="size">Status Change?</label>
+            <input type="radio" name="wall_rental_request[status]" value="APPROVE">
+            <label for="APPROVE">APPROVE</label>
+            
+            <input type="radio" name="wall_rental_request[status]" value="DENY">
+            <label for="DENY">DENY</label>
+    <% end %>
     <br></br>
     <% end %>
     </ol>

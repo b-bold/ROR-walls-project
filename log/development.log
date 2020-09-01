@@ -6197,3 +6197,1566 @@ Completed 200 OK in 212ms (Views: 100.1ms | ActiveRecord: 57.4ms)
   [1m[36mWall Load (1.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
   [1m[36mWallRentalRequest Load (22.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[35m (11.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (5.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (4.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[35m (14.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (2.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (6.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (34.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (29.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (2.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (31.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (18.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[35m (10.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (40.9ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (3.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (38.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (4.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (28.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (7.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (25.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[36mWall Load (1.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (19.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (4.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (6.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (30.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[36mWall Load (2.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (41.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (84.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[35m (19.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (3.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (35.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (41.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (3.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[36mWall Load (2.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[35m (28.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (11.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (2.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[36mWall Load (1.1ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (20.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[35m (10.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (24.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (4.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (2.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (7.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (25.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (8.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (16.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (16.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (202.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (160.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (744.1ms)[0m  [1m[35mCREATE DATABASE "cat_project_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (287.2ms)[0m  [1m[35mCREATE DATABASE "cat_project_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (5.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (59.2ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (35.8ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (44.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 17:51:38.717490"], ["updated_at", "2020-09-01 17:51:38.717490"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (44.1ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (36.0ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (37.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (26.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 17:51:39.007833"], ["updated_at", "2020-09-01 17:51:39.007833"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (2.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-01 17:51:39.017108"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (26.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mWall Load (1.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (14.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWall Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Comm Ave"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mWall Create (0.8ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2020-03-04"], ["wall_material", "wood"], ["name", "Comm Ave"], ["description", "this is a gorgeous wall near lots of people walking around"], ["size", "large"], ["created_at", "2020-09-01 17:51:39.210640"], ["updated_at", "2020-09-01 17:51:39.210640"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWall Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Verdun Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mWall Create (0.5ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "1987-03-04"], ["wall_material", "cement"], ["name", "Verdun Street"], ["description", "The wall is in a lovely neighborhood of mostly Irish immigrants"], ["size", "small"], ["created_at", "2020-09-01 17:51:39.216482"], ["updated_at", "2020-09-01 17:51:39.216482"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWall Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "East Fourth Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mWall Create (0.6ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2016-05-20"], ["wall_material", "concrete"], ["name", "East Fourth Street"], ["description", "Location is in the middle of Southie in a pretty yuppie neighborhood"], ["size", "medium"], ["created_at", "2020-09-01 17:51:39.223247"], ["updated_at", "2020-09-01 17:51:39.223247"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWall Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Highland Avenue"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mWall Create (25.4ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2018-09-12"], ["wall_material", "clay"], ["name", "Highland Avenue"], ["description", "this wall is on a high traffic street in Somerville"], ["size", "medium"], ["created_at", "2020-09-01 17:51:39.230879"], ["updated_at", "2020-09-01 17:51:39.230879"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (13.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Create (0.8ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-05-01"], ["status", "APPROVED"], ["created_at", "2020-09-01 17:51:39.320839"], ["updated_at", "2020-09-01 17:51:39.320839"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-07-08' OR end_date < '2020-06-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-06-01"], ["end_date", "2020-07-08"], ["status", "DENIED"], ["created_at", "2020-09-01 17:51:39.327629"], ["updated_at", "2020-09-01 17:51:39.327629"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Load (24.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '1990-01-01' OR end_date < '1988-02-01')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "1988-02-01"], ["end_date", "1990-01-01"], ["status", "APPROVED"], ["created_at", "2020-09-01 17:51:39.358811"], ["updated_at", "2020-09-01 17:51:39.358811"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-07' OR end_date < '2020-01-15')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-01-15"], ["end_date", "2020-04-07"], ["status", "APPROVED"], ["created_at", "2020-09-01 17:51:39.365421"], ["updated_at", "2020-09-01 17:51:39.365421"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (1.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (151.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (113.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (223.0ms)[0m  [1m[35mCREATE DATABASE "cat_project_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (247.2ms)[0m  [1m[35mCREATE DATABASE "cat_project_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (49.9ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (40.2ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (34.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 17:56:07.272696"], ["updated_at", "2020-09-01 17:56:07.272696"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (50.2ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (38.5ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (30.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 17:56:07.519407"], ["updated_at", "2020-09-01 17:56:07.519407"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-01 17:56:07.524363"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mWall Load (21.9ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (24.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWall Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Comm Ave"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mWall Create (0.7ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2020-03-04"], ["wall_material", "wood"], ["name", "Comm Ave"], ["description", "this is a gorgeous wall near lots of people walking around"], ["size", "large"], ["created_at", "2020-09-01 17:56:07.716505"], ["updated_at", "2020-09-01 17:56:07.716505"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWall Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Verdun Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mWall Create (0.4ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "1987-03-04"], ["wall_material", "cement"], ["name", "Verdun Street"], ["description", "The wall is in a lovely neighborhood of mostly Irish immigrants"], ["size", "small"], ["created_at", "2020-09-01 17:56:07.721063"], ["updated_at", "2020-09-01 17:56:07.721063"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWall Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "East Fourth Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mWall Create (0.6ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2016-05-20"], ["wall_material", "concrete"], ["name", "East Fourth Street"], ["description", "Location is in the middle of Southie in a pretty yuppie neighborhood"], ["size", "medium"], ["created_at", "2020-09-01 17:56:07.725372"], ["updated_at", "2020-09-01 17:56:07.725372"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWall Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Highland Avenue"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mWall Create (0.6ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2018-09-12"], ["wall_material", "clay"], ["name", "Highland Avenue"], ["description", "this wall is on a high traffic street in Somerville"], ["size", "medium"], ["created_at", "2020-09-01 17:56:07.730950"], ["updated_at", "2020-09-01 17:56:07.730950"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Create (1.1ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-05-01"], ["status", "APPROVED"], ["created_at", "2020-09-01 17:56:07.815851"], ["updated_at", "2020-09-01 17:56:07.815851"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-07-08' OR end_date < '2020-06-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-06-01"], ["end_date", "2020-07-08"], ["status", "DENIED"], ["created_at", "2020-09-01 17:56:07.824738"], ["updated_at", "2020-09-01 17:56:07.824738"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Load (1.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '1990-01-01' OR end_date < '1988-02-01')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Create (0.7ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "1988-02-01"], ["end_date", "1990-01-01"], ["status", "APPROVED"], ["created_at", "2020-09-01 17:56:07.834073"], ["updated_at", "2020-09-01 17:56:07.834073"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (25.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-07' OR end_date < '2020-01-15')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-01-15"], ["end_date", "2020-04-07"], ["status", "APPROVED"], ["created_at", "2020-09-01 17:56:07.868246"], ["updated_at", "2020-09-01 17:56:07.868246"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (153.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (135.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (295.6ms)[0m  [1m[35mCREATE DATABASE "cat_project_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (307.1ms)[0m  [1m[35mCREATE DATABASE "cat_project_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (47.7ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (35.0ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (149.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 18:06:59.944765"], ["updated_at", "2020-09-01 18:06:59.944765"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (12.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (50.1ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (30.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (26.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 18:07:00.235900"], ["updated_at", "2020-09-01 18:07:00.235900"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-01 18:07:00.242484"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mWall Load (18.3ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWall Exists (25.7ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Comm Ave"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mWall Create (1.0ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2020-03-04"], ["wall_material", "wood"], ["name", "Comm Ave"], ["description", "this is a gorgeous wall near lots of people walking around"], ["size", "large"], ["created_at", "2020-09-01 18:07:00.435051"], ["updated_at", "2020-09-01 18:07:00.435051"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWall Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Verdun Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mWall Create (0.7ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "1987-03-04"], ["wall_material", "cement"], ["name", "Verdun Street"], ["description", "The wall is in a lovely neighborhood of mostly Irish immigrants"], ["size", "small"], ["created_at", "2020-09-01 18:07:00.441855"], ["updated_at", "2020-09-01 18:07:00.441855"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWall Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "East Fourth Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mWall Create (0.5ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2016-05-20"], ["wall_material", "concrete"], ["name", "East Fourth Street"], ["description", "Location is in the middle of Southie in a pretty yuppie neighborhood"], ["size", "medium"], ["created_at", "2020-09-01 18:07:00.448042"], ["updated_at", "2020-09-01 18:07:00.448042"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWall Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Highland Avenue"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mWall Create (0.8ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2018-09-12"], ["wall_material", "clay"], ["name", "Highland Avenue"], ["description", "this wall is on a high traffic street in Somerville"], ["size", "medium"], ["created_at", "2020-09-01 18:07:00.453593"], ["updated_at", "2020-09-01 18:07:00.453593"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (19.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Create (1.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-05-01"], ["created_at", "2020-09-01 18:07:00.552575"], ["updated_at", "2020-09-01 18:07:00.552575"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Load (24.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-07-08' OR end_date < '2020-06-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Create (0.8ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-06-01"], ["end_date", "2020-07-08"], ["created_at", "2020-09-01 18:07:00.585854"], ["updated_at", "2020-09-01 18:07:00.585854"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '1990-01-01' OR end_date < '1988-02-01')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (1.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "1988-02-01"], ["end_date", "1990-01-01"], ["created_at", "2020-09-01 18:07:00.593321"], ["updated_at", "2020-09-01 18:07:00.593321"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-07' OR end_date < '2020-01-15')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Create (1.0ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-01-15"], ["end_date", "2020-04-07"], ["created_at", "2020-09-01 18:07:00.601501"], ["updated_at", "2020-09-01 18:07:00.601501"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (25.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-04-06"], ["created_at", "2020-09-01 18:07:00.634661"], ["updated_at", "2020-09-01 18:07:00.634661"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mWallRentalRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-02-01"], ["end_date", "2020-05-01"], ["created_at", "2020-09-01 18:07:00.642350"], ["updated_at", "2020-09-01 18:07:00.642350"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mWallRentalRequest Create (0.6ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-03"], ["end_date", "2020-05-06"], ["created_at", "2020-09-01 18:07:00.651208"], ["updated_at", "2020-09-01 18:07:00.651208"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Create (24.6ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-03-01"], ["end_date", "2020-04-05"], ["created_at", "2020-09-01 18:07:00.658803"], ["updated_at", "2020-09-01 18:07:00.658803"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (3.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (11.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Update (1.4ms)[0m  [1m[33mUPDATE "wall_rental_requests" SET "status" = $1, "updated_at" = $2 WHERE "wall_rental_requests"."id" = $3[0m  [["status", "APPROVED"], ["updated_at", "2020-09-01 18:08:46.439985"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallRentalRequest Load (26.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests"[0m
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (11.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[36mWall Load (1.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (18.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (2.3ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[36mWall Load (4.9ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (28.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (11.9ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (11.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (23.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (15.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallRentalRequest Load (2.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (40.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[36mWall Load (1.9ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (23.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (9.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[35m (26.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (27.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[36mWall Load (0.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (5.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (26.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (97.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (104.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (249.7ms)[0m  [1m[35mCREATE DATABASE "cat_project_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (285.8ms)[0m  [1m[35mCREATE DATABASE "cat_project_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (34.4ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (30.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 18:16:27.466010"], ["updated_at", "2020-09-01 18:16:27.466010"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (24.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 18:16:27.753840"], ["updated_at", "2020-09-01 18:16:27.753840"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (25.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-01 18:16:27.773881"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mWall Load (1.3ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (14.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWall Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Comm Ave"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mWall Create (1.0ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2020-03-04"], ["wall_material", "wood"], ["name", "Comm Ave"], ["description", "this is a gorgeous wall near lots of people walking around"], ["size", "large"], ["created_at", "2020-09-01 18:16:27.953775"], ["updated_at", "2020-09-01 18:16:27.953775"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWall Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Verdun Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mWall Create (0.5ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "1987-03-04"], ["wall_material", "cement"], ["name", "Verdun Street"], ["description", "The wall is in a lovely neighborhood of mostly Irish immigrants"], ["size", "small"], ["created_at", "2020-09-01 18:16:27.960917"], ["updated_at", "2020-09-01 18:16:27.960917"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWall Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "East Fourth Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mWall Create (0.8ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2016-05-20"], ["wall_material", "concrete"], ["name", "East Fourth Street"], ["description", "Location is in the middle of Southie in a pretty yuppie neighborhood"], ["size", "medium"], ["created_at", "2020-09-01 18:16:27.967427"], ["updated_at", "2020-09-01 18:16:27.967427"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWall Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Highland Avenue"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mWall Create (24.0ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2018-09-12"], ["wall_material", "clay"], ["name", "Highland Avenue"], ["description", "this wall is on a high traffic street in Somerville"], ["size", "medium"], ["created_at", "2020-09-01 18:16:27.976243"], ["updated_at", "2020-09-01 18:16:27.976243"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (13.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Load (8.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Create (1.0ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-05-01"], ["created_at", "2020-09-01 18:16:28.102105"], ["updated_at", "2020-09-01 18:16:28.102105"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-07-08' OR end_date < '2020-06-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-06-01"], ["end_date", "2020-07-08"], ["created_at", "2020-09-01 18:16:28.110059"], ["updated_at", "2020-09-01 18:16:28.110059"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '1990-01-01' OR end_date < '1988-02-01')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (4.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Create (0.6ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "1988-02-01"], ["end_date", "1990-01-01"], ["created_at", "2020-09-01 18:16:28.122444"], ["updated_at", "2020-09-01 18:16:28.122444"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-07' OR end_date < '2020-01-15')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-01-15"], ["end_date", "2020-04-07"], ["created_at", "2020-09-01 18:16:28.154913"], ["updated_at", "2020-09-01 18:16:28.154913"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-04-06"], ["created_at", "2020-09-01 18:16:28.162311"], ["updated_at", "2020-09-01 18:16:28.162311"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mWallRentalRequest Create (1.1ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-02-01"], ["end_date", "2020-05-01"], ["created_at", "2020-09-01 18:16:28.171991"], ["updated_at", "2020-09-01 18:16:28.171991"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-03"], ["end_date", "2020-05-06"], ["created_at", "2020-09-01 18:16:28.204961"], ["updated_at", "2020-09-01 18:16:28.204961"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Create (0.6ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-03-01"], ["end_date", "2020-04-05"], ["created_at", "2020-09-01 18:16:28.212492"], ["updated_at", "2020-09-01 18:16:28.212492"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Load (2.3ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (18.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Update (0.6ms)[0m  [1m[33mUPDATE "wall_rental_requests" SET "status" = $1, "updated_at" = $2 WHERE "wall_rental_requests"."id" = $3[0m  [["status", "APPROVED"], ["updated_at", "2020-09-01 18:16:48.812477"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (25.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (142.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (117.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (279.1ms)[0m  [1m[35mCREATE DATABASE "cat_project_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (250.0ms)[0m  [1m[35mCREATE DATABASE "cat_project_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (26.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (42.7ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (33.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 18:17:17.015993"], ["updated_at", "2020-09-01 18:17:17.015993"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (37.8ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (33.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 18:17:17.308937"], ["updated_at", "2020-09-01 18:17:17.308937"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-01 18:17:17.316654"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mWall Load (1.3ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (23.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWall Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Comm Ave"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mWall Create (0.8ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2020-03-04"], ["wall_material", "wood"], ["name", "Comm Ave"], ["description", "this is a gorgeous wall near lots of people walking around"], ["size", "large"], ["created_at", "2020-09-01 18:17:17.505297"], ["updated_at", "2020-09-01 18:17:17.505297"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWall Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Verdun Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mWall Create (0.6ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "1987-03-04"], ["wall_material", "cement"], ["name", "Verdun Street"], ["description", "The wall is in a lovely neighborhood of mostly Irish immigrants"], ["size", "small"], ["created_at", "2020-09-01 18:17:17.516976"], ["updated_at", "2020-09-01 18:17:17.516976"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWall Exists (24.9ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "East Fourth Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mWall Create (0.4ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2016-05-20"], ["wall_material", "concrete"], ["name", "East Fourth Street"], ["description", "Location is in the middle of Southie in a pretty yuppie neighborhood"], ["size", "medium"], ["created_at", "2020-09-01 18:17:17.552962"], ["updated_at", "2020-09-01 18:17:17.552962"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWall Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Highland Avenue"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mWall Create (0.5ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2018-09-12"], ["wall_material", "clay"], ["name", "Highland Avenue"], ["description", "this wall is on a high traffic street in Somerville"], ["size", "medium"], ["created_at", "2020-09-01 18:17:17.557977"], ["updated_at", "2020-09-01 18:17:17.557977"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Load (1.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Create (0.8ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-05-01"], ["created_at", "2020-09-01 18:17:17.653615"], ["updated_at", "2020-09-01 18:17:17.653615"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-07-08' OR end_date < '2020-06-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Create (0.7ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-06-01"], ["end_date", "2020-07-08"], ["created_at", "2020-09-01 18:17:17.661667"], ["updated_at", "2020-09-01 18:17:17.661667"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '1990-01-01' OR end_date < '1988-02-01')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Create (0.7ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "1988-02-01"], ["end_date", "1990-01-01"], ["created_at", "2020-09-01 18:17:17.669098"], ["updated_at", "2020-09-01 18:17:17.669098"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-07' OR end_date < '2020-01-15')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Create (25.2ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-01-15"], ["end_date", "2020-04-07"], ["created_at", "2020-09-01 18:17:17.676530"], ["updated_at", "2020-09-01 18:17:17.676530"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Create (0.6ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-04-06"], ["created_at", "2020-09-01 18:17:17.708273"], ["updated_at", "2020-09-01 18:17:17.708273"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mWallRentalRequest Create (0.6ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-02-01"], ["end_date", "2020-05-01"], ["created_at", "2020-09-01 18:17:17.715517"], ["updated_at", "2020-09-01 18:17:17.715517"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mWallRentalRequest Create (0.6ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-03"], ["end_date", "2020-05-06"], ["created_at", "2020-09-01 18:17:17.724091"], ["updated_at", "2020-09-01 18:17:17.724091"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (25.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-03-01"], ["end_date", "2020-04-05"], ["created_at", "2020-09-01 18:17:17.756758"], ["updated_at", "2020-09-01 18:17:17.756758"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (25.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (15.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Update (0.9ms)[0m  [1m[33mUPDATE "wall_rental_requests" SET "status" = $1, "updated_at" = $2 WHERE "wall_rental_requests"."id" = $3[0m  [["status", "APPROVED"], ["updated_at", "2020-09-01 18:17:47.916403"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (69.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[36mWall Load (26.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (5.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (20.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[35m (19.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (18.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (18.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallRentalRequest Load (2.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (28.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[36mWall Load (1.1ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (24.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (5.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[35m (24.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (11.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWallRentalRequest Load (0.4ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (15.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[36mWall Load (1.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (21.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mWallRentalRequest Load (1.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Update (0.7ms)[0m  [1m[33mUPDATE "wall_rental_requests" SET "status" = $1, "updated_at" = $2 WHERE "wall_rental_requests"."id" = $3[0m  [["status", "DENIED"], ["updated_at", "2020-09-01 18:34:21.642698"], ["id", 8]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (11.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (9.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (32.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (200.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (153.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cat_project_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (707.2ms)[0m  [1m[35mCREATE DATABASE "cat_project_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (240.4ms)[0m  [1m[35mCREATE DATABASE "cat_project_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (46.6ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 18:35:35.893498"], ["updated_at", "2020-09-01 18:35:35.893498"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (24.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "wall_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE "wall_rental_requests" ("id" bigserial primary key, "wall_id" integer, "start_date" date NOT NULL, "end_date" date NOT NULL, "status" character varying DEFAULT 'PENDING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_wall_rental_requests_on_wall_id" ON "wall_rental_requests"  ("wall_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "walls" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "walls" ("id" bigserial primary key, "construction_date" date NOT NULL, "wall_material" character varying, "name" character varying NOT NULL, "description" text, "size" character varying(6), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (32.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828160605)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200825121838);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (31.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-01 18:35:36.140464"], ["updated_at", "2020-09-01 18:35:36.140464"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-01 18:35:36.148347"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (26.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mWall Load (1.3ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (18.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mWall Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Comm Ave"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mWall Create (4.5ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2020-03-04"], ["wall_material", "wood"], ["name", "Comm Ave"], ["description", "this is a gorgeous wall near lots of people walking around"], ["size", "large"], ["created_at", "2020-09-01 18:35:36.338504"], ["updated_at", "2020-09-01 18:35:36.338504"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWall Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Verdun Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mWall Create (0.7ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "1987-03-04"], ["wall_material", "cement"], ["name", "Verdun Street"], ["description", "The wall is in a lovely neighborhood of mostly Irish immigrants"], ["size", "small"], ["created_at", "2020-09-01 18:35:36.354929"], ["updated_at", "2020-09-01 18:35:36.354929"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mWall Exists (24.7ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "East Fourth Street"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mWall Create (0.8ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2016-05-20"], ["wall_material", "concrete"], ["name", "East Fourth Street"], ["description", "Location is in the middle of Southie in a pretty yuppie neighborhood"], ["size", "medium"], ["created_at", "2020-09-01 18:35:36.386209"], ["updated_at", "2020-09-01 18:35:36.386209"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mWall Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "walls" WHERE "walls"."name" = $1 LIMIT $2[0m  [["name", "Highland Avenue"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mWall Create (1.0ms)[0m  [1m[32mINSERT INTO "walls" ("construction_date", "wall_material", "name", "description", "size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["construction_date", "2018-09-12"], ["wall_material", "clay"], ["name", "Highland Avenue"], ["description", "this wall is on a high traffic street in Somerville"], ["size", "medium"], ["created_at", "2020-09-01 18:35:36.391716"], ["updated_at", "2020-09-01 18:35:36.391716"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Load (26.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mWallRentalRequest Create (1.1ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-05-01"], ["created_at", "2020-09-01 18:35:36.496958"], ["updated_at", "2020-09-01 18:35:36.496958"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-07-08' OR end_date < '2020-06-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mWallRentalRequest Create (0.6ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-06-01"], ["end_date", "2020-07-08"], ["created_at", "2020-09-01 18:35:36.506633"], ["updated_at", "2020-09-01 18:35:36.506633"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Load (24.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '1990-01-01' OR end_date < '1988-02-01')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mWallRentalRequest Create (0.5ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "1988-02-01"], ["end_date", "1990-01-01"], ["created_at", "2020-09-01 18:35:36.537592"], ["updated_at", "2020-09-01 18:35:36.537592"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-07' OR end_date < '2020-01-15')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mWallRentalRequest Create (0.6ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-01-15"], ["end_date", "2020-04-07"], ["created_at", "2020-09-01 18:35:36.544133"], ["updated_at", "2020-09-01 18:35:36.544133"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mWallRentalRequest Create (2.0ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-01"], ["end_date", "2020-04-06"], ["created_at", "2020-09-01 18:35:36.552685"], ["updated_at", "2020-09-01 18:35:36.552685"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mWallRentalRequest Load (26.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mWallRentalRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-02-01"], ["end_date", "2020-05-01"], ["created_at", "2020-09-01 18:35:36.587361"], ["updated_at", "2020-09-01 18:35:36.587361"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mWallRentalRequest Create (1.0ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-04-03"], ["end_date", "2020-05-06"], ["created_at", "2020-09-01 18:35:36.595024"], ["updated_at", "2020-09-01 18:35:36.595024"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["wall_id", 1]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Create (1.1ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-03-01"], ["end_date", "2020-04-05"], ["created_at", "2020-09-01 18:35:36.604889"], ["updated_at", "2020-09-01 18:35:36.604889"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (25.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (8.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Update (0.7ms)[0m  [1m[33mUPDATE "wall_rental_requests" SET "status" = $1, "updated_at" = $2 WHERE "wall_rental_requests"."id" = $3[0m  [["status", "APPROVED"], ["updated_at", "2020-09-01 18:36:32.097147"], ["id", 1]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (28.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (2.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Update (24.8ms)[0m  [1m[33mUPDATE "wall_rental_requests" SET "status" = $1, "updated_at" = $2 WHERE "wall_rental_requests"."id" = $3[0m  [["status", "DENIED"], ["updated_at", "2020-09-01 18:36:32.158330"], ["id", 5]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-06' OR end_date < '2020-04-01')[0m  [["id", 5], ["wall_id", 1]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (8.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (25.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[36mWall Load (3.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Update (1.2ms)[0m  [1m[33mUPDATE "wall_rental_requests" SET "status" = $1, "updated_at" = $2 WHERE "wall_rental_requests"."id" = $3[0m  [["status", "DENIED"], ["updated_at", "2020-09-01 18:36:32.243715"], ["id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-02-01')[0m  [["id", 6], ["wall_id", 1]]
+  [1m[35m (26.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[36mWall Load (1.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Update (26.3ms)[0m  [1m[33mUPDATE "wall_rental_requests" SET "status" = $1, "updated_at" = $2 WHERE "wall_rental_requests"."id" = $3[0m  [["status", "DENIED"], ["updated_at", "2020-09-01 18:36:32.302285"], ["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (1.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-06' OR end_date < '2020-04-03')[0m  [["id", 7], ["wall_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Update (3.1ms)[0m  [1m[33mUPDATE "wall_rental_requests" SET "status" = $1, "updated_at" = $2 WHERE "wall_rental_requests"."id" = $3[0m  [["status", "DENIED"], ["updated_at", "2020-09-01 18:36:32.402712"], ["id", 8]]
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-04-05' OR end_date < '2020-03-01')[0m  [["id", 8], ["wall_id", 1]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallRentalRequest Load (25.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+Started GET "/wall/1" for ::1 at 2020-09-01 14:49:27 -0400
+  [1m[35m (26.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/wall/1"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/walls/1" for ::1 at 2020-09-01 14:49:35 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (1.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (3.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 379ms (Views: 266.6ms | ActiveRecord: 58.9ms)
+
+

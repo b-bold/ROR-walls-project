@@ -51,8 +51,23 @@ class WallRentalRequest < ActiveRecord::Base
         pending_requests
     end 
 
+    def approve!
+        self.update(status: "APPROVED")
+        self.save
+        @pending_overlapping_requests_array = self.overlapping_pending_requests
+        self.denied
+        self 
+    end
+
+    def denied
+        @pending_overlapping_requests_array.each do |request|
+            request.update(status: "DENIED")
+            request.save!
+        end
+    end 
+
     def does_not_overlap_approved_request 
-        if !self.overlapping_approved_requests.empty?
+        if !self.overlapping_approved_requests.empty? && self.status == "APPROVED"
             errors[:base] << 'conflicts with other approved requests. Choose another start and end date.'
         end 
 
