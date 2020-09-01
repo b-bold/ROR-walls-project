@@ -23,3 +23,7 @@ first_request = WallRentalRequest.create!(wall_id: beacon.id, start_date: "2020-
 second_request = WallRentalRequest.create!(wall_id: beacon.id, start_date: "2020-6-1", end_date: "2020-7-8", status: "DENIED")
 third_request = WallRentalRequest.create!(wall_id: verdun.id, start_date: "1988-2-1", end_date: "1990-1-1", status: "APPROVED")
 fourth_request = WallRentalRequest.create!(wall_id: verdun.id, start_date: "2020-1-15", end_date: "2020-4-7", status: "APPROVED")
+overlapping_one = WallRentalRequest.create!(wall_id: beacon.id, start_date: "2020-4-1", end_date: "2020-4-6", status: "APPROVED")
+overlapping_two = WallRentalRequest.create!(wall_id: beacon.id, start_date: "2020-2-1", end_date: "2020-5-1", status: "APPROVED")
+overlapping_three = WallRentalRequest.create!(wall_id: beacon.id, start_date: "2020-4-3", end_date: "2020-5-6", status: "APPROVED")
+overlapping_four = WallRentalRequest.create!(wall_id: beacon.id, start_date: "2020-3-1", end_date: "2020-4-5", status: "APPROVED")

@@ -1,0 +1,4 @@
+class WallRentalRequestsController < ApplicationController
+
+
+end 
