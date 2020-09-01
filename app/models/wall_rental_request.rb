@@ -32,10 +32,23 @@ class WallRentalRequest < ActiveRecord::Base
 
         array_of_requests.each do |request|
             if request.status == "APPROVED"
-                errors[:request] << 'can\'t input a requests that conflicts with another. please try different dates.' 
+                approved_requests << request
             end 
         end 
         approved_requests
+    end 
+
+    def overlapping_pending_requests
+        array_of_requests = self.overlapping_requests
+        pending_requests = []
+
+        array_of_requests.each do |request|
+           if request.status == "PENDING"
+                pending_requests << request
+            end 
+        end 
+        
+        pending_requests
     end 
 
     def does_not_overlap_approved_request 

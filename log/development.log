@@ -6068,3 +6068,132 @@ Processing by WallsController#index as HTML
 Completed 200 OK in 93ms (Views: 61.5ms | ActiveRecord: 16.7ms)
 
 
+Started GET "/walls/1" for ::1 at 2020-09-01 12:13:43 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 50.4ms)
+
+
+
+ArgumentError - The method .order() must contain arguments.:
+  app/controllers/walls_controller.rb:10:in `show'
+
+Started POST "/__better_errors/d892633ffc321351/variables" for ::1 at 2020-09-01 12:13:43 -0400
+Started GET "/walls/1" for ::1 at 2020-09-01 12:14:18 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (3.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (65.9ms)
+Completed 200 OK in 195ms (Views: 80.4ms | ActiveRecord: 83.6ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-09-01 12:14:28 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (3.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+Completed 500 Internal Server Error in 611ms (ActiveRecord: 26.3ms)
+
+
+
+NameError - undefined local variable or method `start_date' for #<WallsController:0x00007f9dd1187600>:
+  app/controllers/walls_controller.rb:10:in `show'
+
+Started POST "/__better_errors/dbadf341f1ee5b2f/variables" for ::1 at 2020-09-01 12:14:29 -0400
+Started GET "/walls/1" for ::1 at 2020-09-01 12:14:33 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (18.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (73.5ms)
+Completed 200 OK in 190ms (Views: 94.5ms | ActiveRecord: 38.2ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 12:21:06 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (12.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (103.8ms)
+Completed 200 OK in 168ms (Views: 75.7ms | ActiveRecord: 85.8ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 12:21:19 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"4", "start_date"=>"2020-09-09", "end_date"=>"2020-09-10"}}
+  [1m[35m (24.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (1.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-09-10' OR end_date < '2020-09-09')[0m  [["wall_id", 4]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (1.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Create (25.8ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 4], ["start_date", "2020-09-09"], ["end_date", "2020-09-10"], ["created_at", "2020-09-01 16:21:19.266779"], ["updated_at", "2020-09-01 16:21:19.266779"]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Redirected to http://localhost:3000/wall_rental_requests/15
+Completed 302 Found in 108ms (ActiveRecord: 68.5ms)
+
+
+Started GET "/wall_rental_requests/15" for ::1 at 2020-09-01 12:21:19 -0400
+Processing by WallRentalRequestsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:24
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+
+ArgumentError - Unsupported argument type: 15 (Integer):
+  app/controllers/wall_rental_requests_controller.rb:25:in `show'
+
+Started POST "/__better_errors/96c1843f22c6fa0e/variables" for ::1 at 2020-09-01 12:21:19 -0400
+Started GET "/wall_rental_requests/15" for ::1 at 2020-09-01 12:21:43 -0400
+Processing by WallRentalRequestsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mWallRentalRequest Load (0.4ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:24
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 23.2ms)
+
+
+
+ArgumentError - Unsupported argument type: 4 (Integer):
+  app/controllers/wall_rental_requests_controller.rb:25:in `show'
+
+Started POST "/__better_errors/a936930bd25f454a/variables" for ::1 at 2020-09-01 12:21:43 -0400
+Started GET "/wall_rental_requests/15" for ::1 at 2020-09-01 12:21:56 -0400
+Processing by WallRentalRequestsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:24
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:25
+  Rendering wall_rental_requests/show.html.erb within layouts/application
+  Rendered wall_rental_requests/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 212ms (Views: 100.1ms | ActiveRecord: 57.4ms)
+
+
+  [1m[36mWall Load (1.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1[0m  [["wall_id", 1]]
+  [1m[36mWallRentalRequest Load (7.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (2.2ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (6.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (43.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (1.1ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (1.5ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (3.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]
+  [1m[36mWall Load (1.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" ORDER BY "walls"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."id" ASC LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (22.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-05-01' OR end_date < '2020-04-01')[0m  [["id", 1], ["wall_id", 1]]

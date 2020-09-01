@@ -7,7 +7,7 @@ class WallsController < ApplicationController
 
     def show 
         @wall = Wall.find_by(id: params[:id])
-        @wallrentalrequest = @wall.requests
+        @wallrentalrequest = @wall.requests.order(:start_date)
 
         if @wall
             render :show

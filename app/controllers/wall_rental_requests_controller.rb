@@ -22,8 +22,13 @@ class WallRentalRequestsController < ApplicationController
 
     def show
         @wallrentalrequest = WallRentalRequest.find_by(id: params[:id])
+        @wall = Wall.find_by(id: @wallrentalrequest.wall_id)
 
-        redirect_to '/walls'
+        if @wallrentalrequest
+            render :show
+        else 
+            redirect_to '/walls'
+        end 
     end
 
 
