@@ -18,3 +18,16 @@
 
 <h3>Description:</h3>
 <h4><%= @wall.description %></h4>
+    
+<p>    
+
+<h3>Current Reservations on <%= @wall.name %></h3>
+<ol>
+<% @wallrentalrequest.each do |rental_request| %>
+    <li> Status: <%= rental_request.status %></li>
+    Start Date: <%= rental_request.start_date  %>
+    End Date: <%= rental_request.end_date %> 
+    <br></br>
+    <% end %>
+    </ol>
+</p>

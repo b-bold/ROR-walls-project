@@ -5182,3 +5182,889 @@ Migrating to CreateWallRentalRequests (20200828160605)
   [1m[36mWall Load (25.9ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mWallRentalRequest Create (23.8ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 1], ["start_date", "2020-12-01"], ["end_date", "2020-12-03"], ["status", "APPROVED"], ["created_at", "2020-08-31 19:42:47.084464"], ["updated_at", "2020-08-31 19:42:47.084464"]]
   [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/wall_rental_requests" for ::1 at 2020-09-01 08:09:34 -0400
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+AbstractController::ActionNotFound - The action 'index' could not be found for WallRentalRequestsController:
+
+Started POST "/__better_errors/c5b8dfe945a6cab3/variables" for ::1 at 2020-09-01 08:09:35 -0400
+Started GET "/wall_rental_requests" for ::1 at 2020-09-01 08:11:35 -0400
+Processing by WallRentalRequestsController#index as HTML
+Completed 406 Not Acceptable in 294ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - WallRentalRequestsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/7e209a9b058fa10f/variables" for ::1 at 2020-09-01 08:11:35 -0400
+Started GET "/wall_rental_requests" for ::1 at 2020-09-01 08:14:08 -0400
+Processing by WallRentalRequestsController#index as HTML
+  Rendering wall_rental_requests/index.html.erb within layouts/application
+  Rendered wall_rental_requests/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 338ms (Views: 336.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:14:27 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  Rendered wall_rental_requests/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:46:14 -0400
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/wall_rental_requests/new.html.erb:70:in `'
+  app/controllers/wall_rental_requests_controller.rb:10:in `new'
+
+Started POST "/__better_errors/1c242897391f9e9c/variables" for ::1 at 2020-09-01 08:46:15 -0400
+  [1m[36mWall Load (12.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:47:06 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 178ms (Views: 177.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:47:30 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:52:02 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:53:17 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:53:35 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:53:50 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:53:57 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:54:19 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:54:33 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:55:46 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/wall_retal_requests" for ::1 at 2020-09-01 08:55:47 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/wall_retal_requests"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/wall_retal_requests" for ::1 at 2020-09-01 08:56:33 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/wall_retal_requests"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/wall_retal_requests/new" for ::1 at 2020-09-01 08:56:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/wall_retal_requests/new"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:57:04 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 08:57:14 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"", "start_date"=>"2020-09-01", "end_date"=>"2020-09-04"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 08:58:34 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 44ms (Views: 32.6ms | ActiveRecord: 7.2ms)
+
+
+  [1m[36mWall Load (0.9ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:02:22 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"", "start_date"=>"2020-09-01", "end_date"=>"2020-09-04"}}
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Wall Load (0.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+NameError - undefined local variable or method `wall_params' for #<WallRentalRequestsController:0x00007ff6547c85d8>
+Did you mean?  wall_path:
+  app/controllers/wall_rental_requests_controller.rb:14:in `create'
+
+Started POST "/__better_errors/54b53adc1ef76e83/variables" for ::1 at 2020-09-01 09:02:23 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:03:55 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 54ms (Views: 38.4ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:04:02 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"", "start_date"=>"2020-09-01", "end_date"=>"2020-09-04"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveModel::UnknownAttributeError - unknown attribute 'start_date' for Wall.:
+  app/controllers/wall_rental_requests_controller.rb:14:in `create'
+
+Started POST "/__better_errors/f4e6c882d8df550f/variables" for ::1 at 2020-09-01 09:04:02 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:05:06 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 55ms (Views: 44.7ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:05:12 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"", "start_date"=>"2020-09-01", "end_date"=>"2020-09-04"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (8.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" IS NULL AND NOT (start_date > '2020-09-04' OR end_date < '2020-09-01')[0m
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Completed 422 Unprocessable Entity in 56ms (ActiveRecord: 18.0ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Wall must exist:
+  app/controllers/wall_rental_requests_controller.rb:16:in `create'
+
+Started POST "/__better_errors/42ceabaded6654dd/variables" for ::1 at 2020-09-01 09:05:12 -0400
+Started POST "/__better_errors/42ceabaded6654dd/eval" for ::1 at 2020-09-01 09:05:26 -0400
+Started POST "/__better_errors/42ceabaded6654dd/eval" for ::1 at 2020-09-01 09:06:24 -0400
+Started POST "/__better_errors/42ceabaded6654dd/eval" for ::1 at 2020-09-01 09:06:41 -0400
+Started POST "/__better_errors/42ceabaded6654dd/eval" for ::1 at 2020-09-01 09:06:44 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:07:40 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:08:45 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+<label for="start_date">Start Date:</label>
+            ^~~~~~~~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting ')'
+<input type="date" id="start_date" name="wall_...
+             ^~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nput type="date" id="start_date" name="wall_rental_request[s...
+...                     ^~~~~~~~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting ')'
+...date" name="wall_rental_request[start_date]">
+...            ^~~~~~~~~~~~~~~~~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:19: syntax error, unexpected tSTRING_BEG, expecting ')'
+...all_rental_request[start_date]">
+...                              ^
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+<label for="end_date">End Date:</label>
+            ^~~~~~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+<input type="date" id="start_date" name="wall_...
+             ^~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nput type="date" id="start_date" name="wall_rental_request[e...
+...                     ^~~~~~~~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...date" name="wall_rental_request[end_date]">
+...            ^~~~~~~~~~~~~~~~~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting ')'
+..."wall_rental_request[end_date]">
+...                              ^
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:28: syntax error, unexpected tIDENTIFIER, expecting ')'
+<input type="submit" value="Send Rental Request">
+             ^~~~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:28: syntax error, unexpected tCONSTANT, expecting ')'
+...input type="submit" value="Send Rental Request">
+...                           ^~~~
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:35: unterminated string meets end of file
+          end
+             ^
+/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/cat_project/app/views/wall_rental_requests/new.html.erb:35: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^:
+  app/views/wall_rental_requests/new.html.erb:18:in `'
+  app/controllers/wall_rental_requests_controller.rb:10:in `new'
+
+Started POST "/__better_errors/6c279b401ea69557/variables" for ::1 at 2020-09-01 09:08:45 -0400
+  [1m[36mWall Load (1.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:09:13 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+
+ActionView::Template::Error - wrong number of arguments (given 1, expected 0):
+  app/views/wall_rental_requests/new.html.erb:12:in `view template'
+  app/controllers/wall_rental_requests_controller.rb:10:in `new'
+
+Started POST "/__better_errors/4bf1189c56d2ebe3/variables" for ::1 at 2020-09-01 09:09:13 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:09:50 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:09:59 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"", "start_date"=>"2020-09-01", "end_date"=>"2020-09-04"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" IS NULL AND NOT (start_date > '2020-09-04' OR end_date < '2020-09-01')[0m
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 1.1ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Wall must exist:
+  app/controllers/wall_rental_requests_controller.rb:16:in `create'
+
+Started POST "/__better_errors/bf61b4656ee2fba5/variables" for ::1 at 2020-09-01 09:09:59 -0400
+Started POST "/__better_errors/bf61b4656ee2fba5/eval" for ::1 at 2020-09-01 09:10:04 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:16:13 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (1.1ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:16:37 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:16:47 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"", "start_date"=>"2020-09-01", "end_date"=>"2020-09-04"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (1.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" IS NULL AND NOT (start_date > '2020-09-04' OR end_date < '2020-09-01')[0m
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 1.8ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Wall must exist:
+  app/controllers/wall_rental_requests_controller.rb:16:in `create'
+
+Started POST "/__better_errors/06b5083806313bda/variables" for ::1 at 2020-09-01 09:16:47 -0400
+Started POST "/__better_errors/06b5083806313bda/eval" for ::1 at 2020-09-01 09:16:54 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:18:31 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (327.4ms)
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 0.4ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `wall_id' for #<#<Class:0x00007ff64f5eb7d8>:0x00007ff6551655a0>
+Did you mean?  wall:
+  app/views/wall_rental_requests/new.html.erb:12:in `view template'
+  app/controllers/wall_rental_requests_controller.rb:10:in `new'
+
+Started POST "/__better_errors/2929e3ff973b5cb7/variables" for ::1 at 2020-09-01 09:18:32 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:19:47 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+...all_rental_request[wall_id]">><%= wall.id;@output_buffer.saf...
+...                              ^:
+  app/views/wall_rental_requests/new.html.erb:12:in `'
+  app/controllers/wall_rental_requests_controller.rb:10:in `new'
+
+Started POST "/__better_errors/9b033073052f18a4/variables" for ::1 at 2020-09-01 09:19:48 -0400
+  [1m[36mWall Load (0.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:20:51 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:20:59 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"name=\"wall_rental_request[wall_id]\"", "start_date"=>"2020-09-02", "end_date"=>"2020-09-04"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-09-04' OR end_date < '2020-09-02')[0m  [["wall_id", 0]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (1.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Completed 422 Unprocessable Entity in 41ms (ActiveRecord: 2.5ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Wall must exist:
+  app/controllers/wall_rental_requests_controller.rb:16:in `create'
+
+Started POST "/__better_errors/0cf0c95a44001df5/variables" for ::1 at 2020-09-01 09:20:59 -0400
+Started POST "/__better_errors/0cf0c95a44001df5/eval" for ::1 at 2020-09-01 09:21:08 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:22:12 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:22:19 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"name=", "start_date"=>"2020-09-02", "end_date"=>"2020-09-04"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-09-04' OR end_date < '2020-09-02')[0m  [["wall_id", 0]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 2.0ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Wall must exist:
+  app/controllers/wall_rental_requests_controller.rb:16:in `create'
+
+Started POST "/__better_errors/9df5f246c58df763/variables" for ::1 at 2020-09-01 09:22:20 -0400
+Started POST "/__better_errors/9df5f246c58df763/eval" for ::1 at 2020-09-01 09:22:25 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:23:21 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:24:27 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:25:13 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:26:04 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:26:36 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+
+ActionView::Template::Error - undefined method `id' for #<Wall::ActiveRecord_Relation:0x00007ff65476ab68>
+Did you mean?  ids:
+  app/views/wall_rental_requests/new.html.erb:12:in `view template'
+  app/controllers/wall_rental_requests_controller.rb:10:in `new'
+
+Started POST "/__better_errors/af6d6cd3a840da6b/variables" for ::1 at 2020-09-01 09:26:36 -0400
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:26:58 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:28:06 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (3.2ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 09:28:18 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:28:34 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"2", "start_date"=>"2020-09-01", "end_date"=>"2020-09-04"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (2.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-09-04' OR end_date < '2020-09-01')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Create (16.7ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-09-01"], ["end_date", "2020-09-04"], ["created_at", "2020-09-01 13:28:34.459808"], ["updated_at", "2020-09-01 13:28:34.459808"]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 20.1ms)
+
+
+
+NoMethodError - undefined method `wall_rental_request' for #<WallRentalRequestsController:0x00007ff64ecdad88>
+Did you mean?  wall_rental_request_url
+               wall_rental_requests_url
+               wall_rental_request_path:
+  app/controllers/wall_rental_requests_controller.rb:17:in `create'
+
+Started POST "/__better_errors/ecb72e2e6efc2f66/variables" for ::1 at 2020-09-01 09:28:34 -0400
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:29:05 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"2", "start_date"=>"2020-09-01", "end_date"=>"2020-09-04"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (1.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-09-04' OR end_date < '2020-09-01')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Create (0.7ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-09-01"], ["end_date", "2020-09-04"], ["created_at", "2020-09-01 13:29:06.038644"], ["updated_at", "2020-09-01 13:29:06.038644"]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 19.6ms)
+
+
+
+NoMethodError - undefined method `to' for #<WallRentalRequestsController:0x00007ff64f5328f0>
+Did you mean?  t:
+  app/controllers/wall_rental_requests_controller.rb:17:in `create'
+
+Started POST "/__better_errors/8bd7a29d2136a1b9/variables" for ::1 at 2020-09-01 09:29:06 -0400
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 09:29:25 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"2", "start_date"=>"2020-09-01", "end_date"=>"2020-09-04"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-09-04' OR end_date < '2020-09-01')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Create (0.4ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-09-01"], ["end_date", "2020-09-04"], ["created_at", "2020-09-01 13:29:25.088091"], ["updated_at", "2020-09-01 13:29:25.088091"]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Redirected to http://localhost:3000/wall_rental_requests/13
+Completed 302 Found in 41ms (ActiveRecord: 16.5ms)
+
+
+Started GET "/wall_rental_requests/13" for ::1 at 2020-09-01 09:29:25 -0400
+Processing by WallRentalRequestsController#show as HTML
+  Parameters: {"id"=>"13"}
+Completed 406 Not Acceptable in 177ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - WallRentalRequestsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/0768b8557b119342/variables" for ::1 at 2020-09-01 09:29:25 -0400
+Started GET "/wall_rental_requests/13" for ::1 at 2020-09-01 09:42:15 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for WallRentalRequestsController:
+
+Started POST "/__better_errors/f996f5c2de28676c/variables" for ::1 at 2020-09-01 09:42:15 -0400
+Started GET "/walls/1" for ::1 at 2020-09-01 11:47:30 -0400
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (1.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:25
+  Rendered walls/show.html.erb within layouts/application (585.0ms)
+Completed 500 Internal Server Error in 788ms (ActiveRecord: 78.3ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `rental_date' for #<#<Class:0x00007f9dcbb91070>:0x00007f9dcaed8900>
+Did you mean?  rental_request:
+  app/views/walls/show.html.erb:26:in `view template'
+  app/controllers/walls_controller.rb:13:in `show'
+
+Started POST "/__better_errors/9159b6680b780567/variables" for ::1 at 2020-09-01 11:47:31 -0400
+Started GET "/walls/1" for ::1 at 2020-09-01 11:47:42 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (26.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:25
+  Rendered walls/show.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 423ms (Views: 394.1ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-09-01 11:48:07 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (34.1ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:25
+  Rendered walls/show.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 86ms (Views: 49.8ms | ActiveRecord: 34.5ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-09-01 11:48:30 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (38.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (22.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:25
+  Rendered walls/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 102ms (Views: 38.2ms | ActiveRecord: 60.9ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-09-01 11:50:17 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (22.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 81ms (Views: 54.6ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-09-01 11:51:01 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (2.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (7.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 65ms (Views: 50.7ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-09-01 11:51:26 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 95ms (Views: 92.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/wall_rental_requests/new" for ::1 at 2020-09-01 11:53:21 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:11
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-09-01 11:53:29 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"3", "start_date"=>"2020-09-14", "end_date"=>"2020-09-25"}}
+  [1m[35m (22.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Load (1.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-09-25' OR end_date < '2020-09-14')[0m  [["wall_id", 3]]
+  ↳ app/models/wall_rental_request.rb:33
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[36mWallRentalRequest Create (0.8ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["wall_id", 3], ["start_date", "2020-09-14"], ["end_date", "2020-09-25"], ["created_at", "2020-09-01 15:53:29.709707"], ["updated_at", "2020-09-01 15:53:29.709707"]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:16
+Redirected to http://localhost:3000/wall_rental_requests/14
+Completed 302 Found in 46ms (ActiveRecord: 26.4ms)
+
+
+Started GET "/wall_rental_requests/14" for ::1 at 2020-09-01 11:53:29 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for WallRentalRequestsController:
+
+Started POST "/__better_errors/068fc375dda0085e/variables" for ::1 at 2020-09-01 11:53:30 -0400
+Started GET "/wall_rental_requests/14" for ::1 at 2020-09-01 12:09:15 -0400
+Processing by WallRentalRequestsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:24
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 71ms (ActiveRecord: 45.6ms)
+
+
+Started GET "/walls" for ::1 at 2020-09-01 12:09:15 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.9ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:5
+  Rendered walls/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 93ms (Views: 61.5ms | ActiveRecord: 16.7ms)
+
+

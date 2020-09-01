@@ -7,7 +7,7 @@ class WallsController < ApplicationController
 
     def show 
         @wall = Wall.find_by(id: params[:id])
-        puts "this is hello from the show method" 
+        @wallrentalrequest = @wall.requests
 
         if @wall
             render :show

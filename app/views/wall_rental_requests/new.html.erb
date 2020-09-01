@@ -1,0 +1,31 @@
+<h1>Rental Request Form</h1>
+
+
+<form action="/wall_rental_requests" method="post">
+   
+<label for="all_walls">Choose a Wall:</label>
+
+<select name="wall_rental_request[wall_id]">
+    <option disabled selected>Choose a Wall</option>
+
+    <% @wall.each do |wall| %>
+          <option value=<%= wall.id%>><%= wall.name%></option>
+    <% end %>
+</select>   
+
+<br><br>
+
+<label for="start_date">Start Date:</label>
+<input type="date" id="start_date" name="wall_rental_request[start_date]">
+
+<br><br>
+
+<label for="end_date">End Date:</label>
+<input type="date" id="start_date" name="wall_rental_request[end_date]">
+       
+<br><br>
+
+<input type="submit" value="Send Rental Request">
+</form>
+
+    
