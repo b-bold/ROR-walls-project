@@ -20,6 +20,7 @@
 <h4><%= @wall.description %></h4>
     
 <p>    
+    
 
 <h3>Current Reservations on <%= @wall.name %></h3>
 <ol>
@@ -27,14 +28,24 @@
     <li> Status: <%= rental_request.status %></li>
     Start Date: <%= rental_request.start_date  %>
     End Date: <%= rental_request.end_date %> 
-    <% if rental_request.status == "PENDING" %>
-         <label for="size">Status Change?</label>
-            <input type="radio" name="wall_rental_request[status]" value="APPROVE">
-            <label for="APPROVE">APPROVE</label>
-            
-            <input type="radio" name="wall_rental_request[status]" value="DENY">
-            <label for="DENY">DENY</label>
-    <% end %>
+        <% if rental_request.status == "PENDING" %>
+            <br>
+            wall_id: <%= rental_request.wall_id %>
+            id: <%= rental_request.id %>
+            <form action=" <%= approve_wall_rental_request_url(rental_request.id)%>" method="post" class="wall_rental_request[status]">
+            <% @rental_request = rental_request %>
+            <label for="wall_rental_request[status]">Status Change?</label>
+                <input class="wall_rental_request[status]"
+                 type="submit" value="APPROVE">
+
+                 </form>
+
+                <!-- <button name="wall_rental_request[status]" 
+                    type="button">APPROVE</button> 
+                
+                <button name="wall_rental_request[status]" 
+                    type="button">DENY</button> -->
+        <% end %>
     <br></br>
     <% end %>
     </ol>

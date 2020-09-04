@@ -31,8 +31,33 @@ class WallRentalRequestsController < ApplicationController
         end 
     end
 
+    def approve
+        wall_rental_request = WallRentalRequest.find_by(id: params[:id])
+        wall_rental_request.approve!
+        
+        wall = Wall.find_by(id: wall_rental_request.wall.id)
+
+        redirect_to wall_url(wall)
+        
+    end 
+
+    def deny
+        @wallrentalrequest = WallRentalRequest.find_by(id: params[:id])
+        @wallrentalrequest.update(status: "DENY")
+        @wallrentalrequest.save
+
+        @wall = Wall.find_by(id: params[wall_id])
+
+        redirect_to wall_url(@wall) 
+    end 
+
 
     private
+
+    # def current_wall_rental_request
+    #     @rental_request ||=
+    #   WallRentalRequest.includes(:wall).find(params[:id])
+    # end
 
     def wall_rental_request_params
         params.require(:wall_rental_request).permit(:start_date, :end_date, :wall_id, :status)

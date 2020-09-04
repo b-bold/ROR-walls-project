@@ -52,19 +52,30 @@ class WallRentalRequest < ActiveRecord::Base
     end 
 
     def approve!
-        self.update(status: "APPROVED")
-        self.save
-        @pending_overlapping_requests_array = self.overlapping_pending_requests
-        self.denied
-        self 
+        transaction do 
+            self.update(status: "APPROVED")
+            self.save!
+
+            @pending_overlapping_requests_array = self.overlapping_pending_requests
+            
+            @pending_overlapping_requests_array.each do |request|
+                request.update!(status: "DENIED")
+            end 
+        end 
+
     end
 
-    def denied
+
+
+
+    def deny!
         @pending_overlapping_requests_array.each do |request|
             request.update(status: "DENIED")
             request.save!
         end
     end 
+
+    private
 
     def does_not_overlap_approved_request 
         if !self.overlapping_approved_requests.empty? && self.status == "APPROVED"
