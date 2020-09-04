@@ -19,8 +19,7 @@
 <h3>Description:</h3>
 <h4><%= @wall.description %></h4>
     
-<p>    
-    
+<p>      
 
 <h3>Current Reservations on <%= @wall.name %></h3>
 <ol>
@@ -32,19 +31,19 @@
             <br>
             wall_id: <%= rental_request.wall_id %>
             id: <%= rental_request.id %>
-            <form action=" <%= approve_wall_rental_request_url(rental_request.id)%>" method="post" class="wall_rental_request[status]">
-            <% @rental_request = rental_request %>
-            <label for="wall_rental_request[status]">Status Change?</label>
+            <form action=" <%= approve_wall_rental_request_url(rental_request.id) %>" method="post" class="wall_rental_request[status]">
                 <input class="wall_rental_request[status]"
                  type="submit" value="APPROVE">
+            </form>
 
-                 </form>
-
-                <!-- <button name="wall_rental_request[status]" 
-                    type="button">APPROVE</button> 
+            <form action=" <%= deny_wall_rental_request_url(rental_request.id) %>" method="post" class="wall_rental_request[status]">
+                <input class="wall_rental_request[status]"
+                 type="submit" value="DENY">
+            </form>
                 
-                <button name="wall_rental_request[status]" 
-                    type="button">DENY</button> -->
+                 
+
+                 
         <% end %>
     <br></br>
     <% end %>

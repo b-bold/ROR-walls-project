@@ -42,13 +42,12 @@ class WallRentalRequestsController < ApplicationController
     end 
 
     def deny
-        @wallrentalrequest = WallRentalRequest.find_by(id: params[:id])
-        @wallrentalrequest.update(status: "DENY")
-        @wallrentalrequest.save
+        wall_rental_request = WallRentalRequest.find_by(id: params[:id])
+        wall_rental_request.update!(status: "DENIED")
 
-        @wall = Wall.find_by(id: params[wall_id])
+        wall = Wall.find_by(id: wall_rental_request.wall.id)
 
-        redirect_to wall_url(@wall) 
+        redirect_to wall_url(wall) 
     end 
 
 
