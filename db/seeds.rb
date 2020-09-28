@@ -8,6 +8,9 @@
 
 # Delete all records
 Wall.destroy_all
+WallRentalRequest.destroy_all
+User.destroy_all
+
 
 # Reset the primary key sequence so that the first id is 1
 ApplicationRecord.connection.reset_pk_sequence!('walls')
@@ -27,3 +30,8 @@ overlapping_one = WallRentalRequest.create!(wall_id: beacon.id, start_date: "202
 overlapping_two = WallRentalRequest.create!(wall_id: beacon.id, start_date: "2020-2-1", end_date: "2020-5-1", status: "PENDING")
 overlapping_three = WallRentalRequest.create!(wall_id: beacon.id, start_date: "2020-4-3", end_date: "2020-5-6", status: "PENDING")
 overlapping_four = WallRentalRequest.create!(wall_id: beacon.id, start_date: "2020-3-1", end_date: "2020-4-5", status: "PENDING")
+
+# seed the user table
+Neka = User.create!(username: "neka", password: "Fordham86")
+Nazy = User.create!(username: "naz", password: "Fordham86")
+Claude = User.create!(username: "claude", password: "Fordham86")
