@@ -20,4 +20,6 @@ class UsersController< ApplicationController
         params.require(:user).permit(:username, :password_digest, :session_token)
     end 
 
+
+
 end 

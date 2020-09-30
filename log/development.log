@@ -13376,3 +13376,261 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user" for ::1 at 2020-09-30 14:34:41 -0400
+  [1m[35m (36.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-09-30 14:34:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user" for ::1 at 2020-09-30 14:34:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/walls" for ::1 at 2020-09-30 14:35:20 -0400
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+    helper_method: :current_user
+                 ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/walls_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/27245b246c27918d/variables" for ::1 at 2020-09-30 14:35:20 -0400
+Started GET "/walls" for ::1 at 2020-09-30 14:35:43 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (74.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:5
+  Rendered walls/index.html.erb within layouts/application (381.1ms)
+Completed 200 OK in 1491ms (Views: 1134.6ms | ActiveRecord: 320.9ms)
+
+
+Started GET "/walls" for ::1 at 2020-09-30 15:18:26 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (24.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:8
+  Rendered walls/index.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 343ms (Views: 293.7ms | ActiveRecord: 34.8ms)
+
+
+Started GET "/walls/new" for ::1 at 2020-09-30 15:18:28 -0400
+Processing by WallsController#new as HTML
+  Rendering walls/new.html.erb within layouts/application
+  Rendered walls/_form.html.erb (1.0ms)
+  Rendered walls/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-09-30 15:30:04 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (15.1ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:15
+  Rendered walls/index.html.erb within layouts/application (35.8ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 15.1ms)
+
+
+
+ActionView::Template::Error - No route matches {:action=>"show", :controller=>"walls", :id=>nil}, missing required keys: [:id]:
+  app/views/walls/index.html.erb:18:in `view template'
+  app/controllers/walls_controller.rb:5:in `index'
+
+Started POST "/__better_errors/fe177fd37b4e6ac5/variables" for ::1 at 2020-09-30 15:30:04 -0400
+Started GET "/walls" for ::1 at 2020-09-30 15:31:39 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:15
+  Rendered walls/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.5ms)
+
+
+
+ActionView::Template::Error - No route matches {:action=>"show", :controller=>"walls", :id=>nil}, missing required keys: [:id]:
+  app/views/walls/index.html.erb:17:in `view template'
+  app/controllers/walls_controller.rb:5:in `index'
+
+Started POST "/__better_errors/9c5ee24f79b08190/variables" for ::1 at 2020-09-30 15:31:39 -0400
+Started GET "/walls" for ::1 at 2020-09-30 15:33:38 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (2.0ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:15
+  Rendered walls/index.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.0ms)
+
+
+
+ActionView::Template::Error - No route matches {:action=>"show", :controller=>"walls", :id=>nil}, missing required keys: [:id]:
+  app/views/walls/index.html.erb:17:in `view template'
+  app/controllers/walls_controller.rb:5:in `index'
+
+Started POST "/__better_errors/2aa263b803824e32/variables" for ::1 at 2020-09-30 15:33:38 -0400
+Started GET "/walls" for ::1 at 2020-09-30 15:34:11 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (11.2ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:15
+  Rendered walls/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 71ms (Views: 58.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/walls" for ::1 at 2020-09-30 15:35:51 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (23.1ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:15
+  Rendered walls/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 77ms (Views: 52.7ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-09-30 15:35:53 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (31.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (8.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 254ms (Views: 67.6ms | ActiveRecord: 80.3ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-09-30 15:36:05 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (12.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (3.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 72ms (Views: 50.8ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/walls" for ::1 at 2020-09-30 15:36:27 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (19.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:16
+  Rendered walls/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 69ms (Views: 48.6ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/walls" for ::1 at 2020-09-30 15:36:35 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (23.3ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:16
+  Rendered walls/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 75ms (Views: 51.1ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/walls" for ::1 at 2020-09-30 15:37:04 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-09-30 15:42:10 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (39.1ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (12.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 150ms (Views: 94.4ms | ActiveRecord: 51.6ms)
+
+

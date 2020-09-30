@@ -1,8 +1,24 @@
-<h1>All The Walls!</h1>
+<h1>Wall Rental Site</h1>
 
+<p>
+We have a list of all available walls around Boston 
+where street artists can display their murals. You choose
+a space and submit a rental request. The owner of the 
+space will approve or deny the request within 24 hours. 
+</p>
+
+<p>
+Please create a login, this tells us who the artist is. Thank
+you for choosing this site and we look forward to working
+with you.
+</p>
 
 <ol>
     <% @walls.each do |wall| %>
-        <li><%= wall.name %></li>
+        <li>
+            <a href="<%= wall_url(wall) %>">              
+             <%= wall.name %>
+            </a>
+        </li>
     <% end %>
 </ol> 
