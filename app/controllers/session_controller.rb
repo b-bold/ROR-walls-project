@@ -2,7 +2,7 @@ class SessionController < ApplicationController
 
     def new
         @session = Session.new
-        render :new
+        render user_url
     end 
 
     def create
