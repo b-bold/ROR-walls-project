@@ -13634,3 +13634,90 @@ Processing by WallsController#show as HTML
 Completed 200 OK in 150ms (Views: 94.4ms | ActiveRecord: 51.6ms)
 
 
+Started GET "/walls" for ::1 at 2020-09-30 16:36:30 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (21.9ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 342ms (Views: 291.4ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-09-30 16:36:33 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (1.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 175ms (Views: 44.2ms | ActiveRecord: 85.2ms)
+
+
+Started GET "/session/new" for ::1 at 2020-09-30 16:36:43 -0400
+
+ActionController::RoutingError - uninitialized constant SessionsController:
+
+Started POST "/__better_errors/fa95793d27538b6c/variables" for ::1 at 2020-09-30 16:36:43 -0400
+Started GET "/session/new" for ::1 at 2020-09-30 16:37:18 -0400
+
+LoadError - Unable to autoload constant SessionsController, expected /Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/controllers/sessions_controller.rb to define it:
+
+Started POST "/__better_errors/26936d6935ee7e55/variables" for ::1 at 2020-09-30 16:37:19 -0400
+Started GET "/session/new" for ::1 at 2020-09-30 16:37:37 -0400
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant SessionsController::Session:
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/45ba0e37e251fadf/variables" for ::1 at 2020-09-30 16:37:37 -0400
+Started GET "/session/new" for ::1 at 2020-09-30 16:37:51 -0400
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `user_url' for #<SessionsController:0x00007fecf5bf6f28>
+Did you mean?  users_url:
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/d3c89ed744851b7d/variables" for ::1 at 2020-09-30 16:37:51 -0400
+Started GET "/session/new" for ::1 at 2020-09-30 16:37:57 -0400
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template http://localhost:3000/users with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/views"
+:
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/5ada55008ef9c310/variables" for ::1 at 2020-09-30 16:37:58 -0400
+Started GET "/session/new" for ::1 at 2020-09-30 16:38:35 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (633.9ms)
+Completed 500 Internal Server Error in 659ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `form_authencity_token' for #<#<Class:0x00007fecf70ef808>:0x00007fecf70edee0>
+Did you mean?  form_authenticity_token:
+  app/views/sessions/new.html.erb:5:in `view template'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/df152aad16cc4eef/variables" for ::1 at 2020-09-30 16:38:36 -0400
+Started GET "/session/new" for ::1 at 2020-09-30 16:38:51 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+

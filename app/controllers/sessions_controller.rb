@@ -1,8 +1,7 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
 
     def new
-        @session = Session.new
-        render user_url
+        render :new
     end 
 
     def create
