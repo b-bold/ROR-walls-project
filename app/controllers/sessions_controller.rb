@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
             flash.now[:errors] = ["Incorrect username and/or password"]
             render :new
         else
-            session[:session_token] = @user.reset_session_token!
+            login_user(@user)
             redirect_to walls_url
         end 
 

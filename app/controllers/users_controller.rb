@@ -4,7 +4,7 @@ class UsersController< ApplicationController
         @user = User.new(user_params) 
 
         if @user.save
-            session[:session_token] = @user.reset_session_token!
+            login_user(@user)
             redirect_to walls_url(@user)
         else
             flash.now[:errors] = @user.errors.full_messages
