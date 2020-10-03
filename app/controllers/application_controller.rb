@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
     def login_user(user)
         session[:session_token] = user.reset_session_token!
     end 
+
+    def require_no_logged_in_user
+        redirect_to walls_url if current_user
+    end 
 end 
