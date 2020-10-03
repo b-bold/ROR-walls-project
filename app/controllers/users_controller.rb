@@ -1,11 +1,14 @@
 class UsersController< ApplicationController
 
     def create 
-        @user = User.new(user_params)
+        @user = User.new(user_params) 
+
         if @user.save
-            redirect_to session_url
+            session[:session_token] = @user.reset_session_token!
+            redirect_to walls_url(@user)
         else
             flash.now[:errors] = @user.errors.full_messages
+            render :new
         end 
     end 
 
@@ -17,7 +20,7 @@ class UsersController< ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :password_digest, :session_token)
+        params.require(:user).permit(:username, :password)
     end 
 
 end 
