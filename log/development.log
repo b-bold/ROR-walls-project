@@ -13976,3 +13976,1611 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 101ms (Views: 98.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/session/new" for ::1 at 2020-10-01 13:05:14 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-01 13:05:30 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"QNMt3hnt60dda6VLNXI8LVZ1+znD96H1EqElHf4AkFme04Ke7sbp2n+Uu/kMczgLxzl9eS4UR3RKUTz54CABxw==", "user"=>{"username"=>"Danette Ebert", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (36.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Danette Ebert"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 126ms (Views: 67.0ms | ActiveRecord: 46.6ms)
+
+
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/session" for ::1 at 2020-10-01 13:12:28 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"iguwjXSo1/uU6U+EuKVHn5NRMQygdlF7+5bTOUu40YBUCx/Ng4PVZrYWUTaBpEO5Ah23TE2Vt/qjZsrdVZhAHg==", "user"=>{"username"=>"Danette Ebert", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Danette Ebert"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 121.3ms)
+
+
+
+RuntimeError - :
+  app/controllers/sessions_controller.rb:12:in `create'
+
+Started POST "/__better_errors/f7a96531fad639b8/variables" for ::1 at 2020-10-01 13:12:29 -0400
+Started POST "/__better_errors/f7a96531fad639b8/eval" for ::1 at 2020-10-01 13:12:42 -0400
+Started POST "/__better_errors/f7a96531fad639b8/eval" for ::1 at 2020-10-01 13:12:49 -0400
+Started GET "/walls" for ::1 at 2020-10-01 13:14:15 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.2ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (111.1ms)
+Completed 200 OK in 263ms (Views: 156.0ms | ActiveRecord: 80.9ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-01 13:14:40 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 97ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-01 13:14:50 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"1wB/6eGHA1jwDglbWMsSYPwP5CGUstwd6Tp2m4aXjaQJANCpFqwBxdLxF+lhyhZGbUNiYXlROpyxym9/mLccOg==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (25.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 95.7ms)
+
+
+
+NameError - uninitialized constant User::Bcrypt:
+  app/models/user.rb:38:in `is_password?'
+  app/models/user.rb:19:in `find_by_credentials'
+  app/controllers/sessions_controller.rb:8:in `create'
+
+Started POST "/__better_errors/6fb2ea9449a66d75/variables" for ::1 at 2020-10-01 13:14:50 -0400
+Started GET "/walls" for ::1 at 2020-10-01 13:19:35 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.6ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (88.6ms)
+Completed 200 OK in 390ms (Views: 279.6ms | ActiveRecord: 48.2ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-01 13:19:38 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 88ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-01 13:19:43 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"X0W5g4wI6KG8peUJqMJJv3DfF7pAptyJGeHGEPmerkSBRRbDeyPqPJ5a+7uRw02Z4ZOR+q1FOghBEd/0574/2g==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (28.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 500 Internal Server Error in 710ms (ActiveRecord: 82.3ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for "neka":String:
+  app/controllers/sessions_controller.rb:18:in `create'
+
+Started POST "/__better_errors/7c81271e2b5e2fbc/variables" for ::1 at 2020-10-01 13:19:44 -0400
+Started POST "/__better_errors/7c81271e2b5e2fbc/eval" for ::1 at 2020-10-01 13:19:58 -0400
+Started POST "/__better_errors/7c81271e2b5e2fbc/eval" for ::1 at 2020-10-01 13:20:12 -0400
+Started GET "/walls" for ::1 at 2020-10-01 13:20:43 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (134.2ms)
+Completed 200 OK in 387ms (Views: 343.4ms | ActiveRecord: 32.1ms)
+
+
+Started GET "/walls/" for ::1 at 2020-10-01 13:20:44 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (56.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 153ms (Views: 95.1ms | ActiveRecord: 56.4ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-01 13:20:47 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 110ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-01 13:20:51 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"cE22FoUpPHBC4HxOKfyToZxwbpswENaUyXWs+YEFtrGuTRlWcgI+7WAfYvwQ/ZeHDTzo293zMBWRhbUdnyUnLw==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (79.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 500 Internal Server Error in 780ms (ActiveRecord: 156.2ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/sessions_controller.rb:18:in `create'
+
+Started POST "/__better_errors/c2b0bae878600a65/variables" for ::1 at 2020-10-01 13:20:53 -0400
+Started POST "/__better_errors/c2b0bae878600a65/eval" for ::1 at 2020-10-01 13:21:08 -0400
+Started GET "/session/new" for ::1 at 2020-10-01 13:21:43 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-01 13:21:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"7mR/iOdaOPJ7GpEuomhA373Q1N0n61Y9B/m7ZEoOnfkwZNDIEHE6b1nlj5ybaUT5LJxSncoIsLxfCaKAVC4MZw==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 500 Internal Server Error in 1235ms (ActiveRecord: 146.5ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for "neka":String:
+  app/controllers/sessions_controller.rb:18:in `create'
+
+Started POST "/__better_errors/dbbcb42b5a80f89a/variables" for ::1 at 2020-10-01 13:21:49 -0400
+Started GET "/walls" for ::1 at 2020-10-01 13:23:09 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (21.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (64.5ms)
+Completed 200 OK in 249ms (Views: 197.7ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-01 13:23:15 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 158ms (Views: 157.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-01 13:23:19 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"P+UXnqh2dyPo8szJDzwOEjDzJtitkE1/VPOuaehc8Nfh5bjeX111vsoN0ns2PQo0ob+gmEBzq/4MA7eN9nxhSQ==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 500 Internal Server Error in 1754ms (ActiveRecord: 297.3ms)
+
+
+
+NoMethodError - undefined method `generate_session_token' for #<User:0x00007fd9dc2186b8>:
+  app/models/user.rb:27:in `reset_session_token!'
+  app/controllers/sessions_controller.rb:18:in `create'
+
+Started POST "/__better_errors/1cf23648c4812b58/variables" for ::1 at 2020-10-01 13:23:21 -0400
+Started GET "/walls" for ::1 at 2020-10-01 13:23:58 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (28.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (208.2ms)
+Completed 200 OK in 388ms (Views: 220.5ms | ActiveRecord: 156.6ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-01 13:24:01 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 169ms (Views: 166.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-01 13:24:06 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"bWzWUKr7TGvy3ijBnm52ksV1/vtHf+KtXNLgWwPVkimzbHkQXdBO9tAhNnOnb3K0VDl4u6qcBCwEIvm/HfUDtw==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (45.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (19.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (7.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (16.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/user.rb:28
+Completed 422 Unprocessable Entity in 1556ms (ActiveRecord: 187.9ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Password is too short (minimum is 6 characters):
+  app/models/user.rb:28:in `reset_session_token!'
+  app/controllers/sessions_controller.rb:18:in `create'
+
+Started POST "/__better_errors/48ec51df8c0f6190/variables" for ::1 at 2020-10-01 13:24:08 -0400
+Started GET "/walls" for ::1 at 2020-10-02 13:18:51 -0400
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (6.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 361ms (Views: 313.7ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 13:18:55 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 13:19:00 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"VWFhY1mYaY8QvPXqmfYpVzftnFg0VO3igUWnAYB48NqLYc4jrrNrEjJD61ig9y1xpqEaGNm3C2PZtb7lnlhhRA==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (3.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/user.rb:28
+Completed 422 Unprocessable Entity in 350ms (ActiveRecord: 33.5ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Password is too short (minimum is 6 characters):
+  app/models/user.rb:28:in `reset_session_token!'
+  app/controllers/sessions_controller.rb:18:in `create'
+
+Started POST "/__better_errors/878e12aed4c29c54/variables" for ::1 at 2020-10-02 13:19:00 -0400
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/walls" for ::1 at 2020-10-02 13:21:04 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (18.1ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 140ms (Views: 89.9ms | ActiveRecord: 42.3ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 13:21:07 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 62ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 13:21:11 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"KRuniFyB61++etaQlA/3EFrpmm0Fz8lhIsGjQUcG3r33GwjIq6rpwpyFyCKtDvM2y6UcLegsL+B6MbqlWSZPIw==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 18.3ms)
+
+
+
+RuntimeError - :
+  app/models/user.rb:28:in `reset_session_token!'
+  app/controllers/sessions_controller.rb:18:in `create'
+
+Started POST "/__better_errors/db644c467805c25f/variables" for ::1 at 2020-10-02 13:21:12 -0400
+Started POST "/__better_errors/db644c467805c25f/eval" for ::1 at 2020-10-02 13:21:20 -0400
+Started POST "/__better_errors/db644c467805c25f/eval" for ::1 at 2020-10-02 13:21:25 -0400
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/user.rb:28
+Started POST "/__better_errors/db644c467805c25f/eval" for ::1 at 2020-10-02 13:21:34 -0400
+Started POST "/__better_errors/db644c467805c25f/eval" for ::1 at 2020-10-02 13:21:37 -0400
+Started GET "/walls" for ::1 at 2020-10-02 13:27:52 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (104.4ms)
+Completed 200 OK in 177ms (Views: 94.6ms | ActiveRecord: 75.2ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 13:27:53 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 13:27:58 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"wXhyv2x/aJYaIoSzZiWWqJBpBcT15ZZkSYxmAq3NXXsfeN3/m1RqCzjdmgFfJJKOASWDhBgGcOURfH/ms+3M5Q==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (17.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7netNoefUzDHJZC7W3sKDg"], ["updated_at", "2020-10-02 17:27:59.139311"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 500 Internal Server Error in 382ms (ActiveRecord: 31.8ms)
+
+
+
+ActionView::MissingTemplate - Missing template http://localhost:3000/walls with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/views"
+:
+  app/controllers/sessions_controller.rb:19:in `create'
+
+Started POST "/__better_errors/d1a6e238fa615347/variables" for ::1 at 2020-10-02 13:27:59 -0400
+Started GET "/walls" for ::1 at 2020-10-02 13:29:15 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.9ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 103ms (Views: 77.8ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 13:29:17 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 76ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 13:29:22 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"LKwJSQm0dXhZkTmFypgoPQAqmnB42KPqwBEtlJwPU5fyrKYJ/p935XtuJzfzmSwbkWYcMJU7RWuY4TRwgi/CCQ==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "OatQBr388io14WsehXaPwA"], ["updated_at", "2020-10-02 17:29:22.403171"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 319ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 13:29:22 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (10.1ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (14.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OatQBr388io14WsehXaPwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 45ms (Views: 33.9ms | ActiveRecord: 10.5ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 13:29:26 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6ZEwUsoLxETlpvDAwc2JtfVxuHmJSgmBx24mFTEPPX43kZ8SPSDG2cdZ7nL4zI2TZD0+OWSp7wCfnj/xLy+s4A=="}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OatQBr388io14WsehXaPwA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "UgSkbZslW4Dl4IJJ-6VaEg"], ["updated_at", "2020-10-02 17:29:26.759744"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 241ms (ActiveRecord: 6.0ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 13:29:29 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6ZEwUsoLxETlpvDAwc2JtfVxuHmJSgmBx24mFTEPPX43kZ8SPSDG2cdZ7nL4zI2TZD0+OWSp7wCfnj/xLy+s4A=="}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 225ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 13:29:41 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (2.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 13:29:45 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-10-02 13:29:46 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 13:29:47 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (23.9ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 95ms (Views: 70.3ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 13:29:50 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 13:29:58 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"vZK81JAfiQJj9GqS8hso+kiUp70xtc4oz6LaYVvrQeFjkhOUZzSLn0ELdCDLGizc2dgh/dxWKKmXUsOFRcvQfw==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 13:30:06 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Gbt8pokxquKC9sI81Tey9TqoLjH3WQhU4hZQ4hNtWMDHu9Pmfhqof6AJ3I7sNrbTq+SocRq67tW65kkGDU3JXg==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 62ms (Views: 45.0ms | ActiveRecord: 14.8ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 13:30:13 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"UEt2Nu3LSw+tOl6LpsraV1wRq5/eoDzuxtnzEU7ke2COS9l2GuBJko/FQDmfy95xzV0t3zND2m+eKer1UMTq/g==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "EqUGjRELQmX_IVq2o_0VnQ"], ["updated_at", "2020-10-02 17:30:13.729141"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 337ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 13:30:13 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.0ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EqUGjRELQmX_IVq2o_0VnQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 13:30:18 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EqUGjRELQmX_IVq2o_0VnQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 15:26:48 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6szphwkAGSaedzm8HoCIGj55J2XVxjlZyc/hHHimkR40zEbH/isbu7yIJw4ngYw8rzWhJTgl39iRP/j4ZoYAgA=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EqUGjRELQmX_IVq2o_0VnQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (2.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "hN6Fz14MfwpNvTtDDQKdHA"], ["updated_at", "2020-10-02 19:26:48.262714"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 226ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-02 15:27:14 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (10.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (12.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 279ms (Views: 127.4ms | ActiveRecord: 39.2ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 15:27:20 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 73ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 15:27:25 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"leSZNLEIVESDfVwG2JWK/tNLY/r17ryFc7QAXucHpKhL5DZ0RiNW2aGCQrThlI7YQgfluhgNWgQrRBm6+Sc1Ng==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["updated_at", "2020-10-02 19:27:25.686205"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 279ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:27:25 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/walls/2" for ::1 at 2020-10-02 15:27:27 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWall Load (13.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 2]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 64ms (Views: 46.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:27:32 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-02 15:27:35 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (15.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (20.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 77ms (Views: 56.5ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:27:38 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (30.9ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (34.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 85ms (Views: 51.6ms | ActiveRecord: 31.3ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-02 15:27:39 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (3.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 65ms (Views: 57.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:27:41 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (8.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 68ms (Views: 56.9ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-02 15:27:43 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 57ms (Views: 52.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:27:45 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (14.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (18.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 71ms (Views: 55.0ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-02 15:27:46 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (10.9ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (8.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 66ms (Views: 44.2ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:27:48 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (6.3ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 56ms (Views: 47.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-02 15:27:49 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (2.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 51ms (Views: 45.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:27:58 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (17.1ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (19.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 64ms (Views: 45.2ms | ActiveRecord: 17.6ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 15:27:59 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x9EvbjhF9r2nK3T1XrrQfI8Xmn0PaKbG6VautKLMUf4Z0YAuz270IIXUakdnu9RaHlscPeKLQEexprdQvOzAYA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jve_EIYhMSwobOVaCS9EWw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QwdRNqYNd1mZostyfrjESA"], ["updated_at", "2020-10-02 19:27:59.568611"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 197ms (ActiveRecord: 3.8ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 15:29:49 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x9EvbjhF9r2nK3T1XrrQfI8Xmn0PaKbG6VautKLMUf4Z0YAuz270IIXUakdnu9RaHlscPeKLQEexprdQvOzAYA=="}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 189ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 15:30:39 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x9EvbjhF9r2nK3T1XrrQfI8Xmn0PaKbG6VautKLMUf4Z0YAuz270IIXUakdnu9RaHlscPeKLQEexprdQvOzAYA=="}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 190ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-02 15:30:44 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 91ms (Views: 36.5ms | ActiveRecord: 27.2ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 15:30:49 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x9EvbjhF9r2nK3T1XrrQfI8Xmn0PaKbG6VautKLMUf4Z0YAuz270IIXUakdnu9RaHlscPeKLQEexprdQvOzAYA=="}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 195ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:34:27 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 50ms (Views: 38.7ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 15:34:28 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 15:34:33 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"769g8bv8LU8jWdqqH/KjB8t51Jsc6piOrK6P/GJOWNYxr8+xTNcv0gGmxBgm86chWjVS2/EJfg/0XpYYfG7JSA==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "kSs8-c86q2BaFABBhwp8kA"], ["updated_at", "2020-10-02 19:34:34.120812"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 300ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:34:34 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kSs8-c86q2BaFABBhwp8kA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 15:34:35 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TwhttbKXwse+qgE20izTKcZufxiJcRQNyQzl71G8rJeRCML1RbzAWpxVH4TrLdcPVyL5WGSS8oyR/PwLT5w9CQ=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kSs8-c86q2BaFABBhwp8kA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "LJjXwnym_o8Ob7_92wpOkQ"], ["updated_at", "2020-10-02 19:34:35.832833"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.7ms)
+
+
+
+ActionView::MissingTemplate - Missing template http://localhost:3000/session/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/views"
+:
+  app/controllers/sessions_controller.rb:28:in `destroy'
+
+Started POST "/__better_errors/3e07d976ddda1493/variables" for ::1 at 2020-10-02 15:34:35 -0400
+Started GET "/walls" for ::1 at 2020-10-02 15:38:56 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (9.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (11.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kSs8-c86q2BaFABBhwp8kA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 58ms (Views: 46.8ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 15:39:00 -0400
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template sessions/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/views"
+:
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/04477cbf79a6dc00/variables" for ::1 at 2020-10-02 15:39:00 -0400
+Started GET "/walls" for ::1 at 2020-10-02 15:39:25 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.0ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kSs8-c86q2BaFABBhwp8kA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-02 15:39:29 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (8.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kSs8-c86q2BaFABBhwp8kA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 93ms (Views: 33.1ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/walls/2" for ::1 at 2020-10-02 15:39:35 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWall Load (29.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 2]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kSs8-c86q2BaFABBhwp8kA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 73ms (Views: 40.4ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 15:39:38 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kSs8-c86q2BaFABBhwp8kA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 49ms (Views: 39.2ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 15:39:43 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"uyT73BJ1fiQ6iIa+TqtDa07SRY5Jhbd6OVG8/k3Nv2xlJFSc5V58uRh3mAx3qkdN357DzqRmUfthoaUaU+0u8g==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (7.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "8-kTHeLlJ9Cr039iiOXkKw"], ["updated_at", "2020-10-02 19:39:43.878427"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 290ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 15:39:43 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8-kTHeLlJ9Cr039iiOXkKw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 15:39:48 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8WP8HhRaCIjmCHLop+lUOLmoM/N+ZmHGvav+0m6DE7EvY1Ne43EKFcT3bFqe6FAeKOS1s5OFh0flW+c2cKOCLw=="}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8-kTHeLlJ9Cr039iiOXkKw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "FGLTW0rTNwXOE2kNVeEdzQ"], ["updated_at", "2020-10-02 19:39:48.829816"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 11.1ms)
+
+
+
+ActionView::MissingTemplate - Missing template http://localhost:3000/session/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/views"
+:
+  app/controllers/sessions_controller.rb:28:in `destroy'
+
+Started POST "/__better_errors/8d189629afea930b/variables" for ::1 at 2020-10-02 15:39:48 -0400
+Started GET "/walls" for ::1 at 2020-10-02 20:32:10 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (5.3ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (27.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8-kTHeLlJ9Cr039iiOXkKw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 342ms (Views: 308.4ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:32:14 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8-kTHeLlJ9Cr039iiOXkKw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:32:26 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Abhlm3uu99SdGX8FTdrtLPdh6dKkjJGbF4FyX7boTn3fuMrbjIX1Sb/mYbd02+kKZi1vkklvdxpPcWu7qMjf4w==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "wZdgziFK1DGzOyPJr46tTg"], ["updated_at", "2020-10-03 00:32:26.811105"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 244ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 20:32:26 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wZdgziFK1DGzOyPJr46tTg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/walls/2" for ::1 at 2020-10-02 20:32:28 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWall Load (2.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (1.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 2]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (14.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wZdgziFK1DGzOyPJr46tTg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 88ms (Views: 35.8ms | ActiveRecord: 10.6ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 20:32:29 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AW/o4sr2+HMRN5ZlzDy8xv9wjtGjYWYmQovkUYCAOaLfb0eiPd367jPIiNf1PbjgbjwIkU6CgKcae/21nqCoPA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wZdgziFK1DGzOyPJr46tTg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "wwgHv1qFVUNS7PgUeUTUOA"], ["updated_at", "2020-10-03 00:32:29.797572"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to 
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 2.8ms)
+
+
+
+NoMethodError - undefined method `new_url' for #<SessionsController:0x00007f992d97e488>
+Did you mean?  new_user_url:
+  app/controllers/sessions_controller.rb:28:in `destroy'
+
+Started POST "/__better_errors/f4fd65ad18ebe9cb/variables" for ::1 at 2020-10-02 20:32:30 -0400
+Started GET "/walls" for ::1 at 2020-10-02 20:36:27 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (14.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wZdgziFK1DGzOyPJr46tTg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 74ms (Views: 55.8ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:36:30 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wZdgziFK1DGzOyPJr46tTg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:36:33 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"VKxtqPfjnp+UJxVEw0tKVvkxTjdhlSaCXbEqI3CBLzCKrMLoAMicArbYC/b6Sk5waH3Id4x2wAMFQTPHbqG+rg==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7Zwlxf5hSJW1HvRpg-NpdQ"], ["updated_at", "2020-10-03 00:36:33.316925"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 249ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 20:36:33 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7Zwlxf5hSJW1HvRpg-NpdQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 20:36:34 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S4uEu6CdKq1NCTFjXWBWcaG9pdapDvaUeu7W5qOIfF+Viyv7V7YoMG/2L9FkYVJXMPEjlkTtEBUiHs8CvajtwQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7Zwlxf5hSJW1HvRpg-NpdQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "klwExv1ROkkdhUGHF6mucg"], ["updated_at", "2020-10-03 00:36:34.897195"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:36:34 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:36:50 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:36:54 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"TW3qK2e8Y+OBr0fM1WN3kxwcbDQo24dpiEVwIMVOSnyTbUVrkJdhfqNQWX7sYnO1jVDqdMU4YejQtWnE227b4g==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Zyv_vGWuv3m2xXN0ffScpA"], ["updated_at", "2020-10-03 00:36:54.928792"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 266ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 20:36:54 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (15.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Zyv_vGWuv3m2xXN0ffScpA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 52ms (Views: 40.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/walls/2" for ::1 at 2020-10-02 20:36:56 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWall Load (1.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (2.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 2]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (18.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Zyv_vGWuv3m2xXN0ffScpA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 83ms (Views: 44.3ms | ActiveRecord: 22.7ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 20:36:57 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"D9tgXSwNeT82uRGb44lbsYCVd4pWpwnLdeYszvAlJ3DR288d2yZ7ohRGDynaiF+XEdnxyrtE70otFjUq7gW27g=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Zyv_vGWuv3m2xXN0ffScpA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "KMXtXQe36Go0mFZEkr4JMw"], ["updated_at", "2020-10-03 00:36:57.546698"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:36:57 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:38:05 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:38:24 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:38:28 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"jGv1IjBHtA8uS6hV6q2l2TQS5nKR/addc0mm85Y0l7pSa1pix2y2kgy0tufTrKH/pV5gMnweQdwrub8XiBQGJA==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 22.6ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:38:51 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0HLJ6UfIAytWvW+dRqD6CEYs0wtQEu/16Y6ax7HUzoEOcmapsOMBtnRCcS9/of4u12BVS73xCXSxfoMjr/RfHw==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["updated_at", "2020-10-03 00:38:51.537560"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 251ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 20:38:51 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 49ms (Views: 36.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-02 20:38:53 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (1.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:9
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (18.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 87ms (Views: 47.5ms | ActiveRecord: 21.1ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 20:38:54 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ACmYaCF7RESMrvn4gTvbx+k1tTmibIS7qNRTS5I04yfeKTco1lBG2a5R50q4Ot/heHkzeU+PYjrwJEqvjBRyuQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "KoUQ6WvTJViGlvBgNf7Aag"], ["updated_at", "2020-10-03 00:38:54.577922"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.8ms)
+
+
+
+ActionView::MissingTemplate - Missing template http://localhost:3000/walls with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/views"
+:
+  app/controllers/sessions_controller.rb:28:in `destroy'
+
+Started POST "/__better_errors/b70eafba0a9a80cf/variables" for ::1 at 2020-10-02 20:38:54 -0400
+Started GET "/walls" for ::1 at 2020-10-02 20:39:12 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (17.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 72ms (Views: 51.7ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:39:15 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:39:18 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"48U0oa3oFS8MGUQoUF51zRoKaAiZlYW0EClbinITWm89xZvhWsMXsi7mWpppX3Hri0buSHR2YzVI2UJubDPL8Q==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:41:41 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"pjLzPezkmWkT34Tuc2+PH3GpSROUiWocScesp7Nk3mF4Mlx9G8+b9DEgmlxKbos54OXPU3lqjJ0RN7VDrURP/w==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 51ms (Views: 32.0ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:42:30 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"+uV4YjmyCP/j17aJ6Cl41L5UGZOFMsjLgKkPXxiojFsk5dcizpkKYsEoqDvRKHzyLxif02jRLkrYWRa7BogdxQ==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 7.0ms)
+
+
+
+RuntimeError - :
+  app/controllers/sessions_controller.rb:15:in `create'
+
+Started POST "/__better_errors/43b760ae4e0790e5/variables" for ::1 at 2020-10-02 20:42:30 -0400
+Started POST "/__better_errors/43b760ae4e0790e5/eval" for ::1 at 2020-10-02 20:42:41 -0400
+Started GET "/walls" for ::1 at 2020-10-02 20:45:23 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (19.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 262ms (Views: 232.4ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:45:25 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:45:29 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"+gTyOTxbhcQbJoQkgAX9WZthoGCs30OixG+p3BVbHw8kBF15y3CHWTnZmpa5BPl/Ci0mIEE8pSOcn7A4C3uOkQ==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+
+RuntimeError - :
+  app/controllers/sessions_controller.rb:15:in `create'
+
+Started POST "/__better_errors/302bd099d954ab66/variables" for ::1 at 2020-10-02 20:45:29 -0400
+Started GET "/walls" for ::1 at 2020-10-02 20:45:40 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (28.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 78ms (Views: 52.0ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:45:42 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:45:51 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"J0o95WBt9QHTf86sSlsjpPGzDcLiqjpGsHhTobo8qrn5SpKll0b3nPGA0B5zWieCYP+Lgg9J3MfoiEpFpBw7Jw==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SJ33PJpvPtgBOIYxMTUitQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:46:12 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"chKW60z/lwjHdT9WL0YCi+BDNq4QNXFllXr2Ug/0gA+sEjmru9SVleWKIeQWRwatcQ+w7v3Wl+TNiu+2EdQRkQ==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "I6610lJ__WixqSLSn5nJtg"], ["updated_at", "2020-10-03 00:46:12.572669"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 270ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 20:46:12 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (18.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "I6610lJ__WixqSLSn5nJtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 65ms (Views: 37.2ms | ActiveRecord: 6.9ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-02 20:48:22 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Dt9y228LQPndZ2XudqiQPLFI5tPV4bVEBUUj7pmsQyLQ392bmCBCZP+Ye1xPqZQaIARgkzgCU8VdtToKh4zSvA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "I6610lJ__WixqSLSn5nJtg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "y4zRziUuBwvBqxBLLhjPpQ"], ["updated_at", "2020-10-03 00:48:22.751128"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 24ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 20:48:22 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 49ms (Views: 37.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:48:24 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:48:28 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"J0yUOTp5W+0cllyS/tmCkB+cHgGyJZ0+38bQ0rMda6T5TDt5zVJZcD5pQiDH2Ia2jtCYQV/Ge7+HNsk2rT36Og==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/session" for ::1 at 2020-10-02 20:52:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/walls" for ::1 at 2020-10-02 20:52:32 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 69ms (Views: 53.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:52:35 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:53:00 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"q9qprC88prR/IDuEaDyfErp3KgbVHlCxnarG5JtV+LJ12gbs2BekKV3fJTZRPZs0KzusRjj9tjDFWt8AhXVpLA==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 5.9ms)
+
+
+
+ActionView::Template::Error - Missing partial shared/_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/views"
+:
+  app/views/sessions/new.html.erb:3:in `view template'
+  app/controllers/sessions_controller.rb:16:in `create'
+
+Started POST "/__better_errors/195e5927726c40fb/variables" for ::1 at 2020-10-02 20:53:00 -0400
+Started GET "/walls" for ::1 at 2020-10-02 20:55:23 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:55:25 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - Missing partial shared/_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/views"
+:
+  app/views/sessions/new.html.erb:3:in `view template'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/5ec4a1500ba92501/variables" for ::1 at 2020-10-02 20:55:25 -0400
+Started GET "/walls" for ::1 at 2020-10-02 20:56:20 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:56:22 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-02 20:56:30 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.2ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-02 20:56:32 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-02 20:56:40 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"JsbXB2skvB8nchlK8w+gJPz+bm6pVHRuQzH4R9K0Tsv4xnhHnA++ggWNB/jKDqQCbbLoLkS3ku8bweGjzJTfVQ==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+

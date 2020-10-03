@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
     validates :username, presence: true, uniqueness: new
     validates :password_digest, presence: { message: 'Password can\'t be blank'}
-    validates :password, length: { minimum: 6 }
+    validates :password, length: { minimum: 6, allow_nil: true }
     validates :session_token, presence: true
     
     after_initialize :ensure_session_token
@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
         return nil if user.nil?
 
         # check password
-        user.is_password?(password) ? username : nil
+        user.is_password?(password) ? user : nil
     end 
     
     def self.generate_session_token
@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
     end
 
     def reset_session_token!
-        self.session_token = self.generate_session_token
+        self.session_token = self.class.generate_session_token
         self.save!
         self.session_token
     end 
@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
     end
 
     def is_password?(password)
-        Bcrypt::Password.new(self.password_digest).is_password?(password)
+        BCrypt::Password.new(self.password_digest).is_password?(password)
     end 
 
     private

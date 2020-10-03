@@ -9,13 +9,14 @@ class SessionsController < ApplicationController
             params[:user][:username],
             params[:user][:password]
         )
-        
+    
+
         if @user.nil?
             flash.now[:errors] = ["Incorrect username and/or password"]
             render :new
         else
             session[:session_token] = @user.reset_session_token!
-            render walls_url
+            redirect_to walls_url
         end 
 
     end 
@@ -24,6 +25,7 @@ class SessionsController < ApplicationController
         return nil if current_user.nil?
         current_user.reset_session_token!
         session[:session_token] = nil
+        redirect_to walls_url
     end 
 
 
