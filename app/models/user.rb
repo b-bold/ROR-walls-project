@@ -10,6 +10,13 @@ class User < ActiveRecord::Base
     
     after_initialize :ensure_session_token
 
+    has_many(
+        :walls, 
+        class_name: 'Wall',
+        primary_key: :id,
+        foreign_key: :owner_id
+    )
+
     def self.find_by_credentials(username, password)
         # check username
         user = User.find_by(username: username)

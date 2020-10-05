@@ -7,7 +7,15 @@ class Wall < ApplicationRecord
         message: "isn't valid" }
     validates :size, inclusion: { in: %w(small medium large),
         message: "%(value) isn't valid" }
+    validates :owner_id, presence: true
 
+    belongs_to(
+        :owner, 
+        class_name: 'User',
+        primary_key: :id,
+        foreign_key: :owner_id
+    )
+    
     def age
         time_ago_in_words(self.construction_date)
     end 
