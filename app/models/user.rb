@@ -17,6 +17,13 @@ class User < ActiveRecord::Base
         foreign_key: :owner_id
     )
 
+    has_many( 
+        :rental_requests,
+        class_name: 'WallRentalRequest',
+        primary_key: :id,
+        foreign_key: :requester_id
+    )
+
     def self.find_by_credentials(username, password)
         # check username
         user = User.find_by(username: username)

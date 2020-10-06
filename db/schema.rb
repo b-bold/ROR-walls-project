@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_05_162805) do
+ActiveRecord::Schema.define(version: 2020_10_06_190522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2020_10_05_162805) do
     t.string "status", default: "PENDING"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "requester_id"
+    t.index ["requester_id"], name: "index_wall_rental_requests_on_requester_id"
     t.index ["wall_id"], name: "index_wall_rental_requests_on_wall_id"
   end
 

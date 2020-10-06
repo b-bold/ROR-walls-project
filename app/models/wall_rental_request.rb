@@ -5,13 +5,22 @@ class WallRentalRequest < ActiveRecord::Base
     validates :start_date, presence: true
     validates :end_date, presence: true
     validates :status, presence: true   
+    validates :requester_id, presence: true
     validate :does_not_overlap_approved_request 
+
 
     belongs_to(
         :wall, 
         class_name: 'Wall',
         foreign_key: :wall_id,
         primary_key: :id
+    )
+
+     belongs_to( 
+        :requester,
+        class_name: 'User',
+        primary_key: :id,
+        foreign_key: :requester_id
     )
 
     def overlapping_requests
