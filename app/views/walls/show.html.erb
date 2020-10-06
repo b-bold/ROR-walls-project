@@ -16,6 +16,10 @@
     </tbody>
 </table>
 
+<% if @wall.owner == current_user %>
+    <a href="<%= edit_wall_url(@wall) %>">Edit <%= @wall.name %></a>
+<% end %>
+
 <h3>Description:</h3>
 <h4><%= @wall.description %></h4>
     
@@ -48,4 +52,8 @@
     <br></br>
     <% end %>
     </ol>
+
+<% if !current_user.nil? %>
+    <a href="<%= new_wall_rental_request_url(wall_id: @wall.id) %>">Make new request</a>
+  <% end %>
 </p>
