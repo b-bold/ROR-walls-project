@@ -1,5 +1,5 @@
 class WallRentalRequestsController < ApplicationController
-
+    before_action :authorized_user, only: %i(approve deny)
 
     def index
         render :index
@@ -38,7 +38,6 @@ class WallRentalRequestsController < ApplicationController
         wall = Wall.find_by(id: wall_rental_request.wall.id)
 
         redirect_to wall_url(wall)
-        
     end 
 
     def deny
@@ -52,11 +51,6 @@ class WallRentalRequestsController < ApplicationController
 
 
     private
-
-    # def current_wall_rental_request
-    #     @rental_request ||=
-    #   WallRentalRequest.includes(:wall).find(params[:id])
-    # end
 
     def wall_rental_request_params
         params.require(:wall_rental_request).permit(:start_date, :end_date, :wall_id, :status)
