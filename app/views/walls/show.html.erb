@@ -4,14 +4,14 @@
 <table>
     <thead>
         <tr>
-            <th colspan="3">Wall Qualities</th>
+            <th colspan="3">Wall Details</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Wall Material: <%= @wall.wall_material %></td>
-            <td>Size: <%= @wall.size %></td>
-            <td>Construction Date: <%= @wall.construction_date %></td>
+            <td><b>Wall Material:</b> <%= @wall.wall_material %></td>
+            <td><b>Size:</b> <%= @wall.size %></td>
+            <td><b>Construction Date:</b> <%= @wall.construction_date %></td>
         </tr>
     </tbody>
 </table>
@@ -20,18 +20,28 @@
     <a href="<%= edit_wall_url(@wall) %>">Edit <%= @wall.name %></a>
 <% end %>
 
-<h3>Description:</h3>
-<h4><%= @wall.description %></h4>
+<p> <b>Description:</b>
+<%= @wall.description %>
+</p>
     
 <p>      
 
-<h3>Current Reservations on <%= @wall.name %></h3>
+<% is_cat_owner = current_user && current_user.owns_wall?(@wall) %>
+
+
+<h4>Current Reservations on <%= @wall.name %></h4>
+<% if @usernames.empty? %>
+    <p> <%= @wall.name %> + "has no rental requests currently."</p>
+<% else %> 
 <ol>
-<% @wallrentalrequest.each do |rental_request| %>
-    <li> Status: <%= rental_request.status %></li>
+<% @usernames.order('start_date').each do |rental_request| %>
+    <li> Username: <%= rental_request.requester.username %>
+    <br>
+    Status: <%= rental_request.status %></li>
     Start Date: <%= rental_request.start_date  %>
+    <br>
     End Date: <%= rental_request.end_date %> 
-        <% if rental_request.status == "PENDING" && current_user.owns_wall?(@wall) %>
+        <% if rental_request.status == "PENDING" && is_cat_owner %>
             <br>
             wall_id: <%= rental_request.wall_id %>
             id: <%= rental_request.id %>
@@ -43,15 +53,12 @@
             <form action=" <%= deny_wall_rental_request_url(rental_request.id) %>" method="post" class="wall_rental_request[status]">
                 <input class="wall_rental_request[status]"
                  type="submit" value="DENY">
-            </form>
-                
-                 
-
-                 
+            </form> 
         <% end %>
     <br></br>
     <% end %>
     </ol>
+<% end %>
 
 <% if !current_user.nil? %>
     <a href="<%= new_wall_rental_request_url(wall_id: @wall.id) %>">Make new request</a>

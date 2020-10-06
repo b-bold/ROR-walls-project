@@ -11,10 +11,12 @@ class WallRentalRequestsController < ApplicationController
     end 
 
     def create
-        @wall = WallRentalRequest.new(wall_rental_request_params)
+        @wallrentalrequest = WallRentalRequest.new(wall_rental_request_params)
+        @wallrentalrequest.requester_id = current_user.id 
+       
 
-        if @wall.save!
-            redirect_to wall_rental_request_url(@wall)
+        if @wallrentalrequest.save!
+            redirect_to wall_url(@wallrentalrequest.wall)
         else 
             render :new
         end 

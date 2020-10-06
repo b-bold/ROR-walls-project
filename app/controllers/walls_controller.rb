@@ -8,8 +8,8 @@ class WallsController < ApplicationController
 
     def show 
         @wall = Wall.find_by(id: params[:id])
-        @wallrentalrequest = @wall.requests.order(:start_date)
-
+        @usernames = @wall.requests.includes(:requester)
+    
         if @wall
             render :show
         else 
@@ -23,10 +23,10 @@ class WallsController < ApplicationController
     end
 
     def create
-        @wall = Wall.new(wall_params) 
+        @wall = current_user.walls.new(wall_params) 
         
         if @wall.save!
-            redirect_to wall_url(@wall)
+            redirect_sto wall_url(@wall)
         else 
             flash.now[:errors] = @wall.errors.full_messages
             render :new

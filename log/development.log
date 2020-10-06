@@ -19514,3 +19514,1221 @@ Processing by WallsController#index as HTML
 Completed 200 OK in 947ms (Views: 675.7ms | ActiveRecord: 224.0ms)
 
 
+Started GET "/walls/3" for ::1 at 2020-10-06 16:05:40 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:29
+  [1m[36mWallRentalRequest Load (2.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (94.1ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 34.6ms)
+
+
+
+ActionView::Template::Error - undefined method `owns_wall?' for nil:NilClass:
+  app/views/walls/show.html.erb:37:in `view template'
+  app/controllers/walls_controller.rb:14:in `show'
+
+Started POST "/__better_errors/c7aef11e98c8134e/variables" for ::1 at 2020-10-06 16:05:41 -0400
+Started GET "/walls/3" for ::1 at 2020-10-06 16:09:54 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:32
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:36
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (40.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 480ms (Views: 456.0ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:10:53 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (32.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (23.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (15.2ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:32
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:36
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (48.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 130ms (Views: 53.1ms | ActiveRecord: 72.2ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:11:03 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (24.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (24.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:32
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:36
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (38.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 116ms (Views: 61.3ms | ActiveRecord: 52.0ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:11:24 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (3.9ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:32
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:36
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (32.4ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 111ms (Views: 88.1ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:11:35 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (1.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (19.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:32
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:36
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (34.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 101ms (Views: 73.5ms | ActiveRecord: 24.2ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:12:16 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:32
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:36
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (26.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 108ms (Views: 91.1ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:12:34 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (5.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:32
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:36
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (27.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 90ms (Views: 67.3ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:13:06 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (1.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (26.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (35.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 78ms (Views: 45.9ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:13:28 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (3.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered walls/show.html.erb within layouts/application (30.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 79ms (Views: 48.9ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-06 16:15:32 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered sessions/new.html.erb within layouts/application (6.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 79ms (Views: 50.7ms | ActiveRecord: 26.8ms)
+
+
+Started POST "/session" for ::1 at 2020-10-06 16:15:37 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"HwidYBjbSVhYupnxxGPWdoCPFyiX1/OH8jSNm2JiO7vBCDIg7/BLxXpFh0P9YtJQEcORaHo0FQaqxJR/fEKqJQ==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F6ThZ7LHu8Z59X3JjsJ1iQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["updated_at", "2020-10-06 20:15:37.363227"], ["id", 1]]
+  ↳ app/models/user.rb:42
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 309ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 16:15:37 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (16.1ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (19.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 48ms (Views: 30.7ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/walls/2" for ::1 at 2020-10-06 16:15:39 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (20.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (4.4ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 2], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 2]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 86ms (Views: 57.1ms | ActiveRecord: 25.9ms)
+
+
+Started GET "/wall_rental_requests/new?wall_id=2" for ::1 at 2020-10-06 16:15:42 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Parameters: {"wall_id"=>"2"}
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (39.3ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:10
+  Rendered wall_rental_requests/new.html.erb within layouts/application (41.5ms)
+  [1m[36mUser Load (25.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 118ms (Views: 51.5ms | ActiveRecord: 64.8ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-10-06 16:15:53 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"3", "start_date"=>"2020-10-04", "end_date"=>"2020-10-06"}}
+  [1m[36mUser Load (24.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Load (1.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-10-06' OR end_date < '2020-10-04')[0m  [["wall_id", 3]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mUser Load (35.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Create (1.3ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at", "requester_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 3], ["start_date", "2020-10-04"], ["end_date", "2020-10-06"], ["created_at", "2020-10-06 20:15:53.560197"], ["updated_at", "2020-10-06 20:15:53.560197"], ["requester_id", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (14.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+  [1m[36mWallRentalRequest Load (24.9ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-10-06' OR end_date < '2020-10-04')[0m  [["id", 10], ["wall_id", 3]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 103.8ms)
+
+
+
+NoMethodError - undefined method `wall_rental_request_url' for #<WallRentalRequestsController:0x00007fe37f686cc0>
+Did you mean?  wall_rental_requests_url
+               wall_rental_request_params
+               wall_rental_requests_path:
+  app/controllers/wall_rental_requests_controller.rb:18:in `create'
+
+Started POST "/__better_errors/77c6f81bd82e0154/variables" for ::1 at 2020-10-06 16:15:54 -0400
+Started POST "/wall_rental_requests" for ::1 at 2020-10-06 16:16:26 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"3", "start_date"=>"2020-10-04", "end_date"=>"2020-10-06"}}
+  [1m[36mUser Load (27.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-10-06' OR end_date < '2020-10-04')[0m  [["wall_id", 3]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mUser Load (24.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Create (1.4ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at", "requester_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 3], ["start_date", "2020-10-04"], ["end_date", "2020-10-06"], ["created_at", "2020-10-06 20:16:27.265132"], ["updated_at", "2020-10-06 20:16:27.265132"], ["requester_id", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+  [1m[36mWallRentalRequest Load (31.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-10-06' OR end_date < '2020-10-04')[0m  [["id", 11], ["wall_id", 3]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+Redirected to http://localhost:3000/walls.11
+Completed 302 Found in 375ms (ActiveRecord: 276.0ms)
+
+
+Started GET "/walls.11" for ::1 at 2020-10-06 16:16:27 -0400
+Processing by WallsController#index as 
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (14.6ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (20.0ms)
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 159ms (Views: 134.5ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:16:31 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (32.0ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (75.6ms)
+Completed 200 OK in 137ms (Views: 89.3ms | ActiveRecord: 38.1ms)
+
+
+Started GET "/wall_rental_requests/new?wall_id=3" for ::1 at 2020-10-06 16:16:41 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Parameters: {"wall_id"=>"3"}
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (29.2ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:10
+  Rendered wall_rental_requests/new.html.erb within layouts/application (31.9ms)
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 99ms (Views: 61.8ms | ActiveRecord: 36.1ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-10-06 16:16:51 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"3", "start_date"=>"2020-10-04", "end_date"=>"2020-10-05"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-10-05' OR end_date < '2020-10-04')[0m  [["wall_id", 3]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Create (26.3ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at", "requester_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 3], ["start_date", "2020-10-04"], ["end_date", "2020-10-05"], ["created_at", "2020-10-06 20:16:51.581884"], ["updated_at", "2020-10-06 20:16:51.581884"], ["requester_id", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-10-05' OR end_date < '2020-10-04')[0m  [["id", 12], ["wall_id", 3]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+Redirected to http://localhost:3000/walls.12
+Completed 302 Found in 48ms (ActiveRecord: 30.4ms)
+
+
+Started GET "/walls.12" for ::1 at 2020-10-06 16:16:51 -0400
+Processing by WallsController#index as 
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (2.1ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 102ms (Views: 98.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:18:06 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (25.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 216ms (Views: 79.1ms | ActiveRecord: 92.7ms)
+
+
+Started GET "/wall_rental_requests/new?wall_id=3" for ::1 at 2020-10-06 16:18:07 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Parameters: {"wall_id"=>"3"}
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:10
+  Rendered wall_rental_requests/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 65ms (Views: 61.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-10-06 16:18:19 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"3", "start_date"=>"2020-10-05", "end_date"=>"2020-10-06"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-10-06' OR end_date < '2020-10-05')[0m  [["wall_id", 3]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Create (1.3ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at", "requester_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 3], ["start_date", "2020-10-05"], ["end_date", "2020-10-06"], ["created_at", "2020-10-06 20:18:19.813627"], ["updated_at", "2020-10-06 20:18:19.813627"], ["requester_id", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-10-06' OR end_date < '2020-10-05')[0m  [["id", 13], ["wall_id", 3]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+Redirected to http://localhost:3000/walls/13
+Completed 302 Found in 55ms (ActiveRecord: 28.3ms)
+
+
+Started GET "/walls/13" for ::1 at 2020-10-06 16:18:19 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `requests' for nil:NilClass:
+  app/controllers/walls_controller.rb:11:in `show'
+
+Started POST "/__better_errors/487326911672fa06/variables" for ::1 at 2020-10-06 16:18:19 -0400
+Started GET "/walls/13" for ::1 at 2020-10-06 16:20:28 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 16.4ms)
+
+
+
+NoMethodError - undefined method `requests' for nil:NilClass:
+  app/controllers/walls_controller.rb:11:in `show'
+
+Started POST "/__better_errors/27350ed785932559/variables" for ::1 at 2020-10-06 16:20:28 -0400
+Started GET "/walls" for ::1 at 2020-10-06 16:24:39 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (28.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (51.0ms)
+  [1m[36mUser Load (24.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 148ms (Views: 77.6ms | ActiveRecord: 69.7ms)
+
+
+Started GET "/walls/3" for ::1 at 2020-10-06 16:24:42 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mWall Load (8.0ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 3]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 140ms (Views: 62.4ms | ActiveRecord: 61.4ms)
+
+
+  [1m[36mWallRentalRequest Load (0.9ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Started GET "/wall_rental_requests/new?wall_id=3" for ::1 at 2020-10-06 16:29:57 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Parameters: {"wall_id"=>"3"}
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:10
+  Rendered wall_rental_requests/new.html.erb within layouts/application (23.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 127ms (Views: 74.7ms | ActiveRecord: 42.7ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-10-06 16:30:08 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"4", "start_date"=>"2020-10-01", "end_date"=>"2020-10-06"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-10-06' OR end_date < '2020-10-01')[0m  [["wall_id", 4]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[36mWall Load (22.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Create (1.2ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at", "requester_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 4], ["start_date", "2020-10-01"], ["end_date", "2020-10-06"], ["created_at", "2020-10-06 20:30:08.189905"], ["updated_at", "2020-10-06 20:30:08.189905"], ["requester_id", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+  [1m[36mWallRentalRequest Load (1.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" != $1 AND "wall_rental_requests"."wall_id" = $2 AND NOT (start_date > '2020-10-06' OR end_date < '2020-10-01')[0m  [["id", 14], ["wall_id", 4]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:17
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 75.1ms)
+
+
+
+NoMethodError - undefined method `wall_rental_request_url' for #<WallRentalRequestsController:0x00007fe3840790f8>
+Did you mean?  wall_rental_requests_url
+               wall_rental_request_params
+               wall_rental_requests_path:
+  app/controllers/wall_rental_requests_controller.rb:18:in `create'
+
+Started POST "/__better_errors/39fe7b5098bf613d/variables" for ::1 at 2020-10-06 16:30:08 -0400
+Started GET "/walls" for ::1 at 2020-10-06 16:30:57 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (26.5ms)
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 120ms (Views: 78.0ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-06 16:31:00 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (4.9ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 100ms (Views: 64.4ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/wall_rental_requests/new?wall_id=4" for ::1 at 2020-10-06 16:31:02 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Parameters: {"wall_id"=>"4"}
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (54.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:10
+  Rendered wall_rental_requests/new.html.erb within layouts/application (56.6ms)
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 127ms (Views: 66.1ms | ActiveRecord: 59.2ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-10-06 16:31:15 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"2", "start_date"=>"2020-09-30", "end_date"=>"2020-10-21"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Load (1.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-10-21' OR end_date < '2020-09-30')[0m  [["wall_id", 2]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[36mWallRentalRequest Create (29.8ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at", "requester_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 2], ["start_date", "2020-09-30"], ["end_date", "2020-10-21"], ["created_at", "2020-10-06 20:31:15.403931"], ["updated_at", "2020-10-06 20:31:15.403931"], ["requester_id", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:15
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 34.2ms)
+
+
+
+RuntimeError - :
+  app/controllers/wall_rental_requests_controller.rb:16:in `create'
+
+Started POST "/__better_errors/a7f00018d0be47f9/variables" for ::1 at 2020-10-06 16:31:15 -0400
+Started POST "/__better_errors/a7f00018d0be47f9/eval" for ::1 at 2020-10-06 16:31:29 -0400
+Started GET "/walls" for ::1 at 2020-10-06 16:43:51 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (62.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 182ms (Views: 99.2ms | ActiveRecord: 75.9ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-06 16:43:54 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (80.2ms)
+Completed 200 OK in 171ms (Views: 89.2ms | ActiveRecord: 63.4ms)
+
+
+Started GET "/wall_rental_requests/new?wall_id=4" for ::1 at 2020-10-06 16:43:56 -0400
+
+SyntaxError - syntax error, unexpected ')', expecting keyword_end
+...requester_id = current_user.id) 
+...                              ^:
+  app/controllers/wall_rental_requests_controller.rb:15:in `'
+
+Started POST "/__better_errors/bc6bcbecc670b450/variables" for ::1 at 2020-10-06 16:43:56 -0400
+Started GET "/walls" for ::1 at 2020-10-06 16:44:20 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (4.2ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (43.1ms)
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 177ms (Views: 120.4ms | ActiveRecord: 48.8ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-06 16:44:23 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (2.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (2.3ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 160ms (Views: 84.2ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/wall_rental_requests/new?wall_id=4" for ::1 at 2020-10-06 16:44:24 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Parameters: {"wall_id"=>"4"}
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (2.9ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:10
+  Rendered wall_rental_requests/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 83ms (Views: 78.4ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/wall_rental_requests" for ::1 at 2020-10-06 16:44:34 -0400
+Processing by WallRentalRequestsController#create as HTML
+  Parameters: {"wall_rental_request"=>{"wall_id"=>"4", "start_date"=>"2020-10-06", "end_date"=>"2020-10-15"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:18
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."id" IS NOT NULL AND "wall_rental_requests"."wall_id" = $1 AND NOT (start_date > '2020-10-15' OR end_date < '2020-10-06')[0m  [["wall_id", 4]]
+  ↳ app/models/wall_rental_request.rb:42
+  [1m[36mWall Load (3.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:18
+  [1m[36mWallRentalRequest Create (25.1ms)[0m  [1m[32mINSERT INTO "wall_rental_requests" ("wall_id", "start_date", "end_date", "created_at", "updated_at", "requester_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["wall_id", 4], ["start_date", "2020-10-06"], ["end_date", "2020-10-15"], ["created_at", "2020-10-06 20:44:34.084335"], ["updated_at", "2020-10-06 20:44:34.084335"], ["requester_id", 1]]
+  ↳ app/controllers/wall_rental_requests_controller.rb:18
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wall_rental_requests_controller.rb:18
+Redirected to http://localhost:3000/walls/4
+Completed 302 Found in 54ms (ActiveRecord: 33.8ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-06 16:44:34 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 63ms (Views: 46.4ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-06 16:52:40 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (20.9ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 27.9ms)
+
+
+
+ActionView::Template::Error - undefined method `user' for #<WallRentalRequest:0x00007fe3836e4970>
+Did you mean?  super:
+  app/views/walls/show.html.erb:38:in `view template'
+  app/controllers/walls_controller.rb:14:in `show'
+
+Started POST "/__better_errors/1331b581b9032e4d/variables" for ::1 at 2020-10-06 16:52:41 -0400
+  [1m[36mWallRentalRequest Load (1.2ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (15.6ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" ORDER BY "wall_rental_requests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Started GET "/walls/4" for ::1 at 2020-10-06 17:19:10 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (0.9ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:38
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:38
+  Rendered walls/show.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 82ms (Views: 73.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/wall_rental_requests/new?wall_id=4" for ::1 at 2020-10-06 17:19:13 -0400
+Processing by WallRentalRequestsController#new as HTML
+  Parameters: {"wall_id"=>"4"}
+  Rendering wall_rental_requests/new.html.erb within layouts/application
+  [1m[36mWall Load (25.6ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/wall_rental_requests/new.html.erb:10
+  Rendered wall_rental_requests/new.html.erb within layouts/application (28.0ms)
+  [1m[36mUser Load (21.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 100ms (Views: 51.5ms | ActiveRecord: 47.3ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-06 17:19:48 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (133.2ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (61.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (1.6ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:38
+  Rendered walls/show.html.erb within layouts/application (88.5ms)
+Completed 200 OK in 352ms (Views: 148.1ms | ActiveRecord: 200.5ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-06 17:20:01 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (20.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:38
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:38
+  Rendered walls/show.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 111ms (Views: 78.2ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/walls/4" for ::1 at 2020-10-06 17:33:50 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (1.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 43.4ms)
+
+
+
+NoMethodError - undefined method `rental_requests' for #<Wall:0x00007fe37f684268>:
+  app/controllers/walls_controller.rb:11:in `show'
+
+Started POST "/__better_errors/84d824e2b6fd9c57/variables" for ::1 at 2020-10-06 17:33:50 -0400
+Started GET "/walls/4" for ::1 at 2020-10-06 17:35:18 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (0.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 30.1ms)
+
+
+  [1m[36mCACHE WallRentalRequest Load (0.0ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+NoMethodError - undefined method `requests' for #<WallRentalRequest::ActiveRecord_AssociationRelation:0x00007fe384464dc0>
+Did you mean?  reset:
+  app/controllers/walls_controller.rb:12:in `show'
+
+Started POST "/__better_errors/e77ee61be3f8d0ed/variables" for ::1 at 2020-10-06 17:35:18 -0400
+  [1m[36mWallRentalRequest Load (5.3ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE WallRentalRequest Load (0.0ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE WallRentalRequest Load (0.0ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE WallRentalRequest Load (0.0ms)[0m  [1m[34mSELECT  "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/walls/4" for ::1 at 2020-10-06 17:39:32 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 4], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (1.2ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY start_date[0m  [["wall_id", 4]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mUser Load (20.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (125.4ms)
+Completed 200 OK in 265ms (Views: 123.9ms | ActiveRecord: 102.8ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 17:39:37 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (18.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (22.1ms)
+  [1m[36mUser Load (24.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 95ms (Views: 51.2ms | ActiveRecord: 43.2ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-06 17:39:39 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (6.8ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (1.0ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY start_date[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 3]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 91ms (Views: 66.8ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 17:39:55 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (57.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (60.6ms)
+  [1m[36mUser Load (27.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 186ms (Views: 99.6ms | ActiveRecord: 85.2ms)
+
+
+Started GET "/walls/2" for ::1 at 2020-10-06 17:39:59 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWall Load (53.9ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (24.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 2], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY start_date[0m  [["wall_id", 2]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 3], ["id", 1]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 145ms (Views: 61.1ms | ActiveRecord: 80.7ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 17:41:12 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (34.9ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (39.4ms)
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 105ms (Views: 59.9ms | ActiveRecord: 44.6ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-06 17:41:50 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (78.7ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (22.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (33.7ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY start_date[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 3]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (95.5ms)
+Completed 200 OK in 238ms (Views: 91.3ms | ActiveRecord: 144.1ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 17:42:23 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (40.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (44.7ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 156ms (Views: 112.5ms | ActiveRecord: 42.5ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-06 17:42:26 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u8J/ox23AVOYE0UBD1oQ92Ul8d+klys/WiaMA7PawGllwtDj6pwDzrrsW7M2WxTR9Gl3n0l0zb4C1pXnrfpR9w=="}
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iK5BOedMdSixHy7fpSqHbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qAcBgByyUmSnKoxg1Klraw"], ["updated_at", "2020-10-06 21:42:26.518576"], ["id", 1]]
+  ↳ app/models/user.rb:42
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 27ms (ActiveRecord: 18.5ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-06 17:42:26 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-06 17:42:31 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"NiodjprJMfGMNX0j035P3Q7mwORUNZgGjSw+E54e5LjoKrLObeIzbK7KY5Hqf0v7n6pGpLnWfofV3Cf3gD51Jg==", "user"=>{"username"=>"nazy", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nazy"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.4ms)
+  Rendered sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 55ms (Views: 50.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/session" for ::1 at 2020-10-06 17:42:40 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"5ni+kYXOKTq95PwG82uI9IJkDMEMe1JwDiU1nOIqY2Y4eBHRcuUrp58b4rTKaozSEyiKgeGYtPFW1Sx4/Ary+A==", "user"=>{"username"=>"naz", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "naz"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+  [1m[35m (21.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "naz"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "WwjU35mr9HQbucZYT8K0nA"], ["updated_at", "2020-10-06 21:42:40.415674"], ["id", 2]]
+  ↳ app/models/user.rb:42
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 352ms (ActiveRecord: 24.2ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 17:42:40 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (12.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (19.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WwjU35mr9HQbucZYT8K0nA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 82ms (Views: 48.5ms | ActiveRecord: 31.8ms)
+
+
+Started GET "/walls/2" for ::1 at 2020-10-06 17:42:42 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (20.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WwjU35mr9HQbucZYT8K0nA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWallRentalRequest Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 2], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY start_date[0m  [["wall_id", 2]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 3], ["id", 1]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 84ms (Views: 58.6ms | ActiveRecord: 23.1ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-06 17:42:55 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xFFvy49mfiVOTmqY3M8Da6sBTF9x6yN6sgLXCfc2gogaUcCLeE18uGyxdCrlzgdNOk3KH5wIxfvq8s7t6RYTFg=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "WwjU35mr9HQbucZYT8K0nA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "naz"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ZSFEEDcayz5clDl1ZBvLmA"], ["updated_at", "2020-10-06 21:42:55.972068"], ["id", 2]]
+  ↳ app/models/user.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:42
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 11ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-06 17:42:55 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 17:43:25 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (26.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 108ms (Views: 79.8ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-06 17:46:46 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mUser Load (23.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:19
+  [1m[36mWallRentalRequest Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 LIMIT $2[0m  [["wall_id", 1], ["LIMIT", 1]]
+  ↳ app/views/walls/show.html.erb:33
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY start_date[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:37
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 2], ["id", 3]]
+  ↳ app/views/walls/show.html.erb:37
+  Rendered walls/show.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 80ms (Views: 52.8ms | ActiveRecord: 24.9ms)
+
+
