@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    before_action :require_no_logged_in_user only: %i(create new)
+     before_action :require_no_logged_in_user, only: %i(create new) 
 
     def new
         render :new

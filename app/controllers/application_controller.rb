@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
     def require_no_logged_in_user
         redirect_to walls_url if current_user
     end 
+
+     def authorized_user
+        redirect_to walls_url if current_user.nil?
+    end 
 end 

@@ -1,4 +1,5 @@
 class WallsController < ApplicationController
+    before_action :authorized_user, only: %i(update edit) 
     
     def index
         @walls = Wall.all
@@ -27,28 +28,31 @@ class WallsController < ApplicationController
         if @wall.save!
             redirect_to wall_url(@wall)
         else 
+            flash.now[:errors] = @wall.errors.full_messages
             render :new
         end 
     end 
 
     def edit
-        @wall = Wall.find_by(id: params[:id])
+        @wall = current_user.walls.find_by(id: params[:id])
         render :edit
     end 
     
     def update
-        @wall = Wall.find_by(id: params[:id])
+        @wall = current_user.walls.find_by(id: params[:id])
 
         if @wall.update_attributes(wall_params)
             redirect_to wall_url(@wall)
         else 
+            flash.now[:errors] = @wall.errors.full_messages
             render :edit
         end
-    end 
-
+    end  
+    
     private
 
     def wall_params
-        params.require(:wall).permit(:name, :coat_color, :construction_date, :wall_material, :description, :size)
+        params.require(:wall).permit(:name, :coat_color, :construction_date, :wall_material, :description, :size, :owner_id)
     end
+
 end 

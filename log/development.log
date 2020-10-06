@@ -17254,3 +17254,704 @@ Migrating to AddUserIdtoWalls (20201005162805)
   [1m[36mWall Load (0.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls" WHERE "walls"."owner_id" = $1[0m  [["owner_id", 1]]
+Started GET "/walls" for ::1 at 2020-10-05 13:30:44 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+SyntaxError - formal argument cannot be an instance variable
+    def current_user_cat?(@wall)
+                          ^~~~~:
+  app/controllers/walls_controller.rb:57:in `'
+
+Started POST "/__better_errors/816e05cf4b3e6bdd/variables" for ::1 at 2020-10-05 13:30:44 -0400
+Started GET "/walls" for ::1 at 2020-10-05 13:31:39 -0400
+
+SyntaxError - formal argument cannot be an instance variable
+    def authorized_user?(@wall)
+                         ^~~~~:
+  app/controllers/walls_controller.rb:57:in `'
+
+Started POST "/__better_errors/1be12a8f4a361feb/variables" for ::1 at 2020-10-05 13:31:40 -0400
+Started GET "/walls" for ::1 at 2020-10-05 13:31:41 -0400
+
+SyntaxError - formal argument cannot be an instance variable
+    def authorized_user?(@wall)
+                         ^~~~~:
+  app/controllers/walls_controller.rb:57:in `'
+
+Started POST "/__better_errors/6de118591f7565ca/variables" for ::1 at 2020-10-05 13:31:41 -0400
+Started GET "/walls" for ::1 at 2020-10-05 13:32:43 -0400
+Processing by WallsController#index as HTML
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `authorized_cat?' for #<WallsController:0x00007f8eb9db9238>
+Did you mean?  authorized_user?:
+
+Started POST "/__better_errors/2c71fad65fa21af5/variables" for ::1 at 2020-10-05 13:32:43 -0400
+Started GET "/walls" for ::1 at 2020-10-05 13:32:58 -0400
+Processing by WallsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 9.5ms)
+
+
+
+NoMethodError - undefined method `walls' for nil:NilClass:
+  app/controllers/walls_controller.rb:58:in `authorized_user?'
+
+Started POST "/__better_errors/d198eecd663050b4/variables" for ::1 at 2020-10-05 13:32:59 -0400
+Started GET "/walls" for ::1 at 2020-10-05 13:33:22 -0400
+Processing by WallsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 6.7ms)
+
+
+
+NoMethodError - undefined method `walls' for nil:NilClass:
+  app/controllers/walls_controller.rb:58:in `authorized_user?'
+
+Started POST "/__better_errors/ed4f363c9935826e/variables" for ::1 at 2020-10-05 13:33:22 -0400
+Started GET "/walls" for ::1 at 2020-10-05 13:33:33 -0400
+Processing by WallsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - :
+  app/controllers/walls_controller.rb:58:in `authorized_user?'
+
+Started POST "/__better_errors/b8da23d828717168/variables" for ::1 at 2020-10-05 13:33:33 -0400
+Started POST "/__better_errors/b8da23d828717168/eval" for ::1 at 2020-10-05 13:33:42 -0400
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Started GET "/walls" for ::1 at 2020-10-05 13:38:56 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...e_action :authorized_user? only: %i(edit update)
+...                           ^~~~:
+  app/controllers/walls_controller.rb:3:in `'
+
+Started POST "/__better_errors/c011c8157bf383f0/variables" for ::1 at 2020-10-05 13:38:56 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:21:35 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...re_action :authorized_user only: %i(edit update)
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/bd86fc07b8cbdd9f/variables" for ::1 at 2020-10-05 14:21:35 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:23:04 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...re_action :authorized_user only: %i(edit update)
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/0bf02fc8f69011bf/variables" for ::1 at 2020-10-05 14:23:04 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:23:25 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...re_action :authorized_user only: %i(edit update)
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/0ac0025f4d780d29/variables" for ::1 at 2020-10-05 14:23:26 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:24:00 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...re_action :authorized_user only: %i(edit update)
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/1ca90c4b0d5e5f9d/variables" for ::1 at 2020-10-05 14:24:00 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:24:25 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...re_action :authorized_user only: %i(edit update)
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/b0a98ad70ac3f88d/variables" for ::1 at 2020-10-05 14:24:25 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:24:26 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...re_action :authorized_user only: %i(edit update)
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/fc99078fcdb257dd/variables" for ::1 at 2020-10-05 14:24:26 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:24:32 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...re_action :authorized_user only: %i(edit update)
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/584173016d740a59/variables" for ::1 at 2020-10-05 14:24:32 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:24:56 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.0ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (28.2ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 415ms (Views: 316.1ms | ActiveRecord: 87.2ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-05 14:27:09 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    before_action :placebo only: %i(edit update)
+                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/e4b7c9d72bcdb19b/variables" for ::1 at 2020-10-05 14:27:09 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:27:41 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    before_action :placebo only: %i(edit update)
+                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/638d6e0f12b1641a/variables" for ::1 at 2020-10-05 14:27:42 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:28:13 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    before_action :placebo only: %i(edit update)
+                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/61477fd95a227528/variables" for ::1 at 2020-10-05 14:28:13 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:29:42 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...:require_no_logged_in_user only: %i(create new) 
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/6f3d9aaa95697e2f/variables" for ::1 at 2020-10-05 14:29:42 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:29:43 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...:require_no_logged_in_user only: %i(create new) 
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/c27a550304c84f5e/variables" for ::1 at 2020-10-05 14:29:43 -0400
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT "walls".* FROM "walls" WHERE "walls"."owner_id" = $1[0m  [["owner_id", 1]]
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."owner_id" = $1 AND "walls"."id" = $2 LIMIT $3[0m  [["owner_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."owner_id" = $1 AND "walls"."id" = $2 LIMIT $3[0m  [["owner_id", 1], ["id", 3], ["LIMIT", 1]]
+Started GET "/cats" for ::1 at 2020-10-05 14:37:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cats"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/walls" for ::1 at 2020-10-05 14:37:19 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...re_action :authorized_user only: %i(update edit) 
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/29e0bc92aafa93de/variables" for ::1 at 2020-10-05 14:37:19 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:37:32 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...re_action :authorized_user only: %i(update edit) 
+...                           ^~~~:
+  app/controllers/walls_controller.rb:2:in `'
+
+Started POST "/__better_errors/5b57c0da3278d9e8/variables" for ::1 at 2020-10-05 14:37:32 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:38:31 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.2ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (21.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 69ms (Views: 47.5ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-05 14:39:07 -0400
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...:require_no_logged_in_user only: %i(create new) 
+...                           ^~~~:
+  app/controllers/sessions_controller.rb:2:in `'
+
+Started POST "/__better_errors/231a31e121fc2407/variables" for ::1 at 2020-10-05 14:39:07 -0400
+Started GET "/walls" for ::1 at 2020-10-05 14:40:31 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (22.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 81ms (Views: 59.9ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-05 14:40:48 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (1.7ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (13.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 91ms (Views: 37.0ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-05 14:40:53 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered sessions/new.html.erb within layouts/application (5.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2020-10-05 14:40:56 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XYBOdrTQ09lj2wyC9FJI86OepY941W5jdDGLUmaAlf6DgOE2Q/vRREEkEjDNU0zVMtIjz5U2iOIswZK2eKAEYA==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fjgsrbIaMD4kOfdup64TuQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "wvXlm8RIGChRv64KuJzh0g"], ["updated_at", "2020-10-05 18:40:57.155735"], ["id", 1]]
+  ↳ app/models/user.rb:35
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:35
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 253ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-05 14:40:57 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wvXlm8RIGChRv64KuJzh0g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-05 14:40:59 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (5.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wvXlm8RIGChRv64KuJzh0g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 52ms (Views: 43.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/walls/1/edit" for ::1 at 2020-10-05 14:44:17 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - :
+  app/controllers/application_controller.rb:21:in `authorized_user'
+
+Started POST "/__better_errors/4f5ef1e552644238/variables" for ::1 at 2020-10-05 14:44:17 -0400
+Started GET "/walls/1" for ::1 at 2020-10-05 14:49:20 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wvXlm8RIGChRv64KuJzh0g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-05 14:49:22 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wvXlm8RIGChRv64KuJzh0g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 42ms (Views: 29.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-05 14:52:06 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wvXlm8RIGChRv64KuJzh0g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-05 14:52:08 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.5ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wvXlm8RIGChRv64KuJzh0g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-05 14:52:13 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v1RrtGiCFv6rGd/sBtehT/kV8TOPPrbhTV7fcCPvT1ZhVMT0n6kUY4nmwV4/1qVpaFl3c2LdUGAVrsaUPc/eyA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wvXlm8RIGChRv64KuJzh0g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "9L3IV1-hi9Z_DDE46MwbZg"], ["updated_at", "2020-10-05 18:52:13.361629"], ["id", 1]]
+  ↳ app/models/user.rb:35
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:35
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-05 14:52:13 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 12:23:17 -0400
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (31.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (112.7ms)
+Completed 200 OK in 414ms (Views: 305.1ms | ActiveRecord: 90.4ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-06 12:24:12 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (3.4ms)
+  Rendered sessions/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 67ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-10-06 12:24:15 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Z7DjgsS02lX2hCNm63RW1UFRetawA+xFCougFuAXf6G5sEzCM5/YyNR7PdTSdVLz0B38ll3gCsRSe7ny/jfuPw==", "user"=>{"username"=>"neka", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "neka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+  [1m[35m (14.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Update (6.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "CEi88ullC_udT2S9UvWMzA"], ["updated_at", "2020-10-06 16:24:16.196649"], ["id", 1]]
+  ↳ app/models/user.rb:35
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:35
+Redirected to http://localhost:3000/walls
+Completed 302 Found in 469ms (ActiveRecord: 59.7ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 12:24:16 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (1.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (10.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CEi88ullC_udT2S9UvWMzA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 104ms (Views: 100.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-06 12:24:18 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (1.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (3.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (30.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CEi88ullC_udT2S9UvWMzA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 161ms (Views: 104.1ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-06 12:33:23 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (3.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (1.4ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (19.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CEi88ullC_udT2S9UvWMzA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 123ms (Views: 84.9ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:36:16 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - :
+  app/controllers/application_controller.rb:21:in `authorized_user'
+
+Started POST "/__better_errors/0c2b560b27786673/variables" for ::1 at 2020-10-06 12:36:16 -0400
+Started POST "/__better_errors/0c2b560b27786673/eval" for ::1 at 2020-10-06 12:36:53 -0400
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CEi88ullC_udT2S9UvWMzA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Started POST "/__better_errors/0c2b560b27786673/eval" for ::1 at 2020-10-06 12:37:00 -0400
+  [1m[36mWall Load (0.4ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."owner_id" = $1 LIMIT $2[0m  [["owner_id", 1], ["LIMIT", 11]]
+  ↳ /Users/nekakerr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started POST "/__better_errors/0c2b560b27786673/eval" for ::1 at 2020-10-06 12:37:14 -0400
+  [1m[36mWall Load (0.9ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."owner_id" = $1 AND "walls"."id" = $2 LIMIT $3[0m  [["owner_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+Started POST "/__better_errors/0c2b560b27786673/eval" for ::1 at 2020-10-06 12:37:23 -0400
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."owner_id" = $1 AND "walls"."id" = $2 LIMIT $3[0m  [["owner_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:38:21 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (21.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CEi88ullC_udT2S9UvWMzA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."owner_id" = $1 AND "walls"."id" = $2 LIMIT $3[0m  [["owner_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+Completed 500 Internal Server Error in 707ms (ActiveRecord: 71.8ms)
+
+
+
+NameError - undefined local variable or method `current_wall' for #<WallsController:0x00007fa84e079768>
+Did you mean?  current_user:
+  app/controllers/walls_controller.rb:36:in `edit'
+
+Started POST "/__better_errors/d40410eb1f315c70/variables" for ::1 at 2020-10-06 12:38:22 -0400
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:40:14 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CEi88ullC_udT2S9UvWMzA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mWall Load (0.6ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."owner_id" = $1 AND "walls"."id" = $2 LIMIT $3[0m  [["owner_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+  [1m[36mWall Load (2.3ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:36
+  Rendering walls/edit.html.erb within layouts/application
+  Rendered walls/_form.html.erb (4.0ms)
+  Rendered walls/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1015ms (Views: 533.3ms | ActiveRecord: 80.3ms)
+
+
+Started DELETE "/session" for ::1 at 2020-10-06 12:40:21 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uhdxf4DowxCW3stFIQOivxbJWOpqTq13nMcTEYCpdZFkF94/d8PBjbQh1fcYAqaZh4XeqoetS/bENwr1nonkDw=="}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CEi88ullC_udT2S9UvWMzA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:35
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "neka"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35
+  [1m[36mUser Update (37.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "EFSZ2KC76EynMeTt7Df-gA"], ["updated_at", "2020-10-06 16:40:21.891331"], ["id", 1]]
+  ↳ app/models/user.rb:35
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:35
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 60ms (ActiveRecord: 48.7ms)
+
+
+Started GET "/session/new" for ::1 at 2020-10-06 12:40:21 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 60ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 12:40:27 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (10.8ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 137ms (Views: 124.7ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:40:32 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `walls' for nil:NilClass:
+  app/controllers/application_controller.rb:21:in `authorized_user'
+
+Started POST "/__better_errors/a37c9509727e6be5/variables" for ::1 at 2020-10-06 12:40:33 -0400
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:41:15 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/walls
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `walls' for nil:NilClass:
+  app/controllers/application_controller.rb:22:in `authorized_user'
+
+Started POST "/__better_errors/9000c68e594203c1/variables" for ::1 at 2020-10-06 12:41:15 -0400
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:41:29 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - :
+  app/controllers/application_controller.rb:21:in `authorized_user'
+
+Started POST "/__better_errors/d59fcaba4366c718/variables" for ::1 at 2020-10-06 12:41:29 -0400
+Started POST "/__better_errors/d59fcaba4366c718/eval" for ::1 at 2020-10-06 12:41:33 -0400
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:41:44 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - :
+  app/controllers/application_controller.rb:21:in `authorized_user'
+
+Started POST "/__better_errors/0f1ae9016793c138/variables" for ::1 at 2020-10-06 12:41:44 -0400
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:41:57 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template http://localhost:3000/walls with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nekakerr/Desktop/Coding/appacademy/07_rails/cats_project/my_cat_project_part_1/app/views"
+:
+  app/controllers/application_controller.rb:21:in `authorized_user'
+
+Started POST "/__better_errors/ec94cb46936e84a8/variables" for ::1 at 2020-10-06 12:41:57 -0400
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:52:13 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/walls
+Filter chain halted as :authorized_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 12:52:13 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (22.4ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 148ms (Views: 69.6ms | ActiveRecord: 71.2ms)
+
+
+Started GET "/walls/1" for ::1 at 2020-10-06 12:52:17 -0400
+Processing by WallsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWall Load (0.5ms)[0m  [1m[34mSELECT  "walls".* FROM "walls" WHERE "walls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/walls_controller.rb:10
+  Rendering walls/show.html.erb within layouts/application
+  [1m[36mWallRentalRequest Load (0.8ms)[0m  [1m[34mSELECT "wall_rental_requests".* FROM "wall_rental_requests" WHERE "wall_rental_requests"."wall_id" = $1 ORDER BY "wall_rental_requests"."start_date" ASC[0m  [["wall_id", 1]]
+  ↳ app/views/walls/show.html.erb:26
+  Rendered walls/show.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 152ms (Views: 102.5ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/walls/1/edit" for ::1 at 2020-10-06 12:52:21 -0400
+Processing by WallsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/walls
+Filter chain halted as :authorized_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/walls" for ::1 at 2020-10-06 12:52:22 -0400
+Processing by WallsController#index as HTML
+  Rendering walls/index.html.erb within layouts/application
+  [1m[36mWall Load (17.7ms)[0m  [1m[34mSELECT "walls".* FROM "walls"[0m
+  ↳ app/views/walls/index.html.erb:17
+  Rendered walls/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 64ms (Views: 45.0ms | ActiveRecord: 17.7ms)
+
+
