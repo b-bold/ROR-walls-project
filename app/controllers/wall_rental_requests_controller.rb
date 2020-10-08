@@ -18,6 +18,7 @@ class WallRentalRequestsController < ApplicationController
         if @wallrentalrequest.save!
             redirect_to wall_url(@wallrentalrequest.wall)
         else 
+            flash.now[:errors] = @wallrentalrequest.errors.full_messsages
             render :new
         end 
     end 
