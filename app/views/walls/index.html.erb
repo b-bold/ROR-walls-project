@@ -1,20 +1,28 @@
-<h1>Wall Rental Site</h1>
+<h1>Welcome to the Wall Rental Space</h1>
 
-<p>
-This is a test site built by Neka Kerr to demonstrate her coding skills. It is intended
-for street artists to schedule time for their curated mural on a given wall.
-</p>
+<section class="purpose"> 
+    <h3>Purpose of this site</h3>
+        <p>
+        This is a test site built by Neka Kerr to demonstrate her coding abilities. It was built in Ruby on Rails, HTML, CSS, & PostgreSQL and is intended
+        for street artists to schedule time for their curated mural to be displayed on a given wall.
+        </p>
 
-<p>
-The 
-</p>
+        <p>
+        To see the full funtionality of the site, log in as the Verdun Street wall owner 'neka'
+        using the password 'password'. This will allow you to approve and deny rental requests
+        for the Verdun Street wall. 
+        </p>
+</section>
 
-<ol>
-    <% @walls.each do |wall| %>
-        <li>
-            <a href="<%= wall_url(wall) %>">              
-             <%= wall.name %>
-            </a>
-        </li>
-    <% end %>
-</ol> 
+<section class="ordered-list">
+    <h3>Available Walls</h3>
+
+        <ol>
+            <% @walls.each do |wall| %>
+                <li>
+                <a href="<%= wall_url(wall) %>">              
+                <%= wall.name %>
+                </a>
+                </li>
+            <% end %>
+        </ol> 
