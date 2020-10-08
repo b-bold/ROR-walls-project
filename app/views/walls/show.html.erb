@@ -26,7 +26,7 @@
     
 <p>      
 
-<% is_cat_owner = current_user && current_user.owns_wall?(@wall) %>
+<% is_wall_owner = current_user && current_user.owns_wall?(@wall) %>
 
 
 <h4>Current Reservations on <%= @wall.name %></h4>
@@ -41,7 +41,7 @@
     Start Date: <%= rental_request.start_date  %>
     <br>
     End Date: <%= rental_request.end_date %> 
-        <% if rental_request.status == "PENDING" && is_cat_owner %>
+        <% if rental_request.status == "PENDING" && is_wall_owner %>
             <br>
             wall_id: <%= rental_request.wall_id %>
             id: <%= rental_request.id %>
