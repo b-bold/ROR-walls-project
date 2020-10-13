@@ -17,12 +17,21 @@
 body {
     font-family: 'Cormorant Garamond', serif;
     background-color: whitesmoke;
+    margin: 20px
  }
 
-.secondary-nav {
-    margin-top: 10px
-} 
+nav {
+    display: inline-block
+}
 
-.purpose {
-    
+nav div a { 
+  display: block;
+}
+
+section { 
+    display: inline-block
+}
+
+form input {
+    display: inline-block
 }
