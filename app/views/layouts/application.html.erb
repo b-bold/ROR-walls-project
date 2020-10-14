@@ -13,17 +13,16 @@
 
   <body>
   <header>
-    <nav class="main-nav">
-    <a href="<%= walls_url %>">Home
-      </a>
+    <ul>
+    <nav>
+    <li><a href="<%= walls_url %>">Home
+      </a></li>
 
-    <div>
     <% if current_user.nil? %>
-        <a href="<%= new_user_url %>">Sign Up</a>
-        <br>
-        <a href="<%= new_session_url %>">Sign In</a>
+        <li> <a href="<%= new_user_url %>">Sign Up</a></li>
+        <li><a href="<%= new_session_url %>">Sign In</a></li>
     <% else %>
-      <%= current_user.username %> is logged in.
+      <li><%= current_user.username %> is logged in.
       <form action="<%= session_url %>" method="post">
         <input
           type="hidden"
@@ -31,9 +30,9 @@
           value="<%= form_authenticity_token %>">
           <input type="hidden" name="_method" value="delete">
           <input type="submit" value="Logout">
-      </form>    
+      </form></li>    
     <% end %>  
-    </div>
+    </ul>
     </nav>
   </header>
 

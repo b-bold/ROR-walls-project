@@ -4,7 +4,16 @@
 
 <h1><%= @wall.name %></h1>
 
-
+<section class="img-details">
+    <figure>
+        <img class="fit-picture" 
+            src="https://www.rosekennedygreenway.org/wp-content/uploads/2019/08/RKG_2019_ART_Thelan_01-1024x683.jpg" alt="Resonance">
+            
+            <figcaption class="figcaption">
+            <a href="https://www.rosekennedygreenway.org/wp-content/uploads/2019/08/RKG_2019_ART_Thelan_01-1024x683.jpg">Resonance, 2019 by: Super A (Stefan Thelen)</a>
+            </figcaption>
+        </figure>
+<p>        
 <table>
     <thead>
         <tr>
@@ -20,22 +29,27 @@
     </tbody>
 </table>
 
+<b>Description:</b>
+<%= @wall.description %>
+<br><br>
+
 <% if @wall.owner == current_user %>
     <a href="<%= edit_wall_url(@wall) %>">Edit <%= @wall.name %></a>
 <% end %>
 
-<p> <b>Description:</b>
-<%= @wall.description %>
 </p>
-    
-<p>      
+</section >
+
+<p>   
 
 <% is_wall_owner = current_user && current_user.owns_wall?(@wall) %>
 
 
+<section class="reservations">
+
 <h4>Current Reservations on <%= @wall.name %></h4>
 <% if @usernames.empty? %>
-    <p> <%= @wall.name %> + "has no rental requests currently."</p>
+    <p> <%= @wall.name %> has no rental requests currently.</p>
 <% else %> 
 <ol>
 <% @usernames.order('start_date').each do |rental_request| %>
@@ -59,12 +73,15 @@
                  type="submit" value="DENY">
             </form> 
         <% end %>
-    <br></br>
     <% end %>
     </ol>
 <% end %>
+</p>
 
+<p>
 <% if !current_user.nil? %>
     <a href="<%= new_wall_rental_request_url(wall_id: @wall.id) %>">Make new request</a>
   <% end %>
 </p>
+
+</section>

@@ -14,6 +14,14 @@
  *= require_self
  */
 
+html, body, div, ol, ul, li, form, label, figure, figcaption, footer, header, nav {
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
 body {
     font-family: 'Cormorant Garamond', serif;
     background-color: whitesmoke;
@@ -21,17 +29,51 @@ body {
  }
 
 nav {
-    display: inline-block
+    float: right;
 }
 
-nav div a { 
-  display: block;
+nav a { 
+    padding: 10px;
 }
 
-section { 
-    display: inline-block
+ul {
+    list-style: none;
 }
 
-form input {
-    display: inline-block
+.ordered-list {  
+    width: 33.33%;
+    float: left;
+}
+
+.purpose {
+    width: 66.66%;
+    float: left;
+}
+
+h1 {
+    text-align: center;
+}
+
+.specific {
+    padding-left: 40px;
+}
+
+
+.fit-picture {
+    width: 100%;
+}
+
+.reservations {  
+    width: 30%;
+    float: left;
+}
+
+.img-details {
+    width: 60%;
+    float: left;
+    padding: 20px;
+}
+
+figure figcaption a {
+    text-align: center;
 }
